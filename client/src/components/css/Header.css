@@ -1,0 +1,44 @@
+header{
+  background-color: #161616;
+  /*background-color: #F7F7F7;*/
+  display: flex;
+  justify-content: space-between;
+  /*padding: 0.7rem 1rem;*/
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+.AreaTitulo{
+  /*background-color: crimson;*/
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+}
+
+.AreaTitulo, navbar{
+  margin: 1rem;
+}
+
+.Logo{
+  width: 12vw;
+}
+
+.TituloSite{
+  width: fit-content;
+}
+
+.TituloCabecalho{
+  color: #4f59ff;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.SubtituloCabecalho{
+  /*text-align: center;*/
+  font-size: 0.9rem;
+}
+
+navbar{
+  /*margin-right: 20vw;*/
+}

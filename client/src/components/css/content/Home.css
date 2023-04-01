@@ -1,0 +1,15 @@
+section{
+  /*background-color: orange;*/
+  width: 85vw;
+  margin: 20px auto;
+}
+
+button{
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+.HomeTitulo{
+  color: #42B0FF;
+}

@@ -1,0 +1,14 @@
+import React from 'react'
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'
+
+import '../../css/content/Descricao.css'
+import '../../css/content/Home.css'
+
+export default props=>
+<section className='Descricao'>
+<h2 className='HomeTitulo DescTitulo Fonte1'>Sobre Mim</h2>
+<h3 className='DescTexto Fonte2'>Programador web fullstack. Desenvolvo a parte visual e interativa do site no lado do cliente e o código no lado do servidor, com manipulação de banco de dados e APIs. Programo em React e Node.JS</h3>
+<button className='DescButton'>Veja Minhas Habilidades <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{margin: "0px", marginLeft: "1rem"}}/></button>
+</section>
