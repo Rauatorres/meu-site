@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import {faCircleChevronRight} from '@fortawesome/free-solid-svg-icons'
@@ -21,8 +22,6 @@ export default props=>{
         display: 'flex'
       }
       let novoEstiloMenuFora = {
-        /*width: '45vw',
-        height: '100vh',*/
         display: 'block'
       }
       let novoEstiloMenu = {
@@ -40,37 +39,6 @@ export default props=>{
       document.querySelector('body').style.overflow = 'hidden'
       setIconeBotao(faCircleChevronRight)
       setMenuClicado(true)
-      /*let novoEstiloMenuBox = {
-        position: 'absolute',
-        width: '100vw',
-        height: '100vh',
-        margin: '0px',
-        display: 'flex'
-      }
-      let novoEstiloMenuFora = {
-        position: 'absolute',
-        width: '45vw',
-        height: '100vh'
-      }
-      
-      let novoEstiloMenu = {
-        position: 'absolute',
-        width: '70vw',
-        height: '100vh',
-        margin: '0px',
-        marginLeft: '30vw',
-        backgroundColor: 'rgba(0, 0, 0, 0.85)'
-      }
-      document.querySelector('.BotaoMenu').style.margin = '1rem'
-      Object.assign(menuBoxElemento.style, novoEstiloMenuBox)
-      Object.assign(menuForaElemento.style, novoEstiloMenuFora)
-      Object.assign(menuElemento.style, novoEstiloMenu)
-      menuElemento.classList.add('expandido');
-      document.querySelector('.LinkList').style.display = 'block'
-      document.querySelector('body').style.overflow = 'hidden'
-      setIconeBotao(faCircleChevronRight)
-      setMenuClicado(true)
-      menuElemento.classList.add('expandido')*/
     }else{
       let novoEstiloMenu = {
         width: '0px'
@@ -101,37 +69,6 @@ export default props=>{
         setIconeBotao(faBars)
       }, 600)
       setMenuClicado(false)
-      /*let novoEstiloMenuBox = {
-        width: 'fit-content',
-        height: 'fit-content',
-        position: 'relative',
-        marginRight: '10vw'
-      }
-      let novoEstiloMenuFora = {
-        width: 'fit-content',
-        height: 'fit-content',
-        position: 'relative'
-      }
-      let novoEstiloMenu = {
-        width: '0px',
-        height: '0',
-        position: 'relative',
-        margin: '0px',
-        backgroundColor: 'purle'
-      }
-      
-      menuElemento.style.right = '0'
-      menuElemento.classList.remove('expandido');
-      document.querySelector('.LinkList').style.display = 'none'
-      document.querySelector('body').style.overflow = 'auto'
-      setTimeout(()=>{
-        document.querySelector('.BotaoMenu').style.margin = '0px'
-        Object.assign(menuElemento.style, novoEstiloMenu)
-        Object.assign(menuBoxElemento.style, novoEstiloMenuBox)
-        Object.assign(menuForaElemento.style, novoEstiloMenuFora)
-        setIconeBotao(faBars)
-      }, 600);
-      setMenuClicado(false)*/
     }
   }
   
@@ -141,10 +78,10 @@ export default props=>{
       <div id='menu' className='MenuNavbar'>
         <div className='BotaoMenu' onClick = {mostrarMenu}><FontAwesomeIcon icon={iconeBotao} /></div>
         <ul className='LinkList Fonte2'>
-          <li className='MenuLink'>Home</li>
-          <li className='MenuLink'>Sobre Mim</li>
-          <li className='MenuLink'>Meus Projetos</li>
-          <li className='MenuLink'>Contato</li>
+          <li className='MenuLink' onClick = {mostrarMenu}><Link to='/' className='Link MenuLinkColor'>Home</Link></li>
+          <li className='MenuLink' onClick = {mostrarMenu}><Link to='/sobre' className='Link MenuLinkColor'>Sobre Mim</Link></li>
+          <li className='MenuLink' onClick = {mostrarMenu}><Link to='/projetos' className='Link MenuLinkColor'>Meus Projetos</Link></li>
+          <li className='MenuLink' onClick = {mostrarMenu}><Link to='/contato' className='Link MenuLinkColor'>Contato</Link></li>
         </ul>
       </div>
     </navbar>

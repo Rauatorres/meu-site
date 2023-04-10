@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
@@ -18,7 +19,6 @@ export default props=>{
     try{
       const response = await axios.get('http://localhost:3001/api/projetos')
       setProjetos(response.data)
-      /*alert(response.data.length)*/
     }catch (error){
       alert(error)
     }
@@ -40,7 +40,7 @@ export default props=>{
     <section className='AreaProjetos'>
       <h3 className='HomeTitulo TituloSecaoProjetos Fonte1'>Meus Projetos</h3>
       {gerarProjetos()}
-      <button className="BotaoProjetos">Ver Mais Projetos <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "0.5rem"}}/></button>
+      <button className="BotaoProjetos"><Link to='/projetos' className='Link BotaoProjetosColor'>Ver Mais Projetos <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "0.5rem"}}/></Link></button>
       
     </section>
   )
