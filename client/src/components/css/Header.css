@@ -42,3 +42,7 @@ header{
 navbar{
   /*margin-right: 20vw;*/
 }
+
+.OffcanvasMenu{
+  background-color: black;
+}

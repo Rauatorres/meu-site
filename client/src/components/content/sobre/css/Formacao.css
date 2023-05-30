@@ -1,0 +1,18 @@
+.FormacaoSection{
+  background-color: green;
+}
+
+.FormacaoTitulo, .FormacaoLista{
+  margin: 1rem auto;
+}
+.FormacaoTitulo{
+  background-color: red;
+}
+.FormacaoLista{
+  background-color: blue;
+  width: fit-content;
+  padding: 1rem;
+}
+.FormacaoCard{
+  margin: 2rem 0;
+}

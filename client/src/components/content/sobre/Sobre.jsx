@@ -1,6 +1,16 @@
 import React from 'react'
 
+import Apresentacao from './apresentacao/Apresentacao'
+import Habilidades from './habilidades/Habilidades'
+import Tecnologias from './tecnologias/Tecnologias'
+import Formacao from './formacao/Formacao'
+
+import './css/Sobre.css'
+
 export default props=>
 <>
-  <h1>Sobre Mim</h1>
+  <Apresentacao/>
+  <Habilidades/>
+  <Tecnologias/>
+  <Formacao/>
 </>

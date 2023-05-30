@@ -1,4 +1,12 @@
 main{
   /*background-color: blue;*/
-  margin-top: 130px;
+  margin-top: 0px;
+}
+section{
+  /*background-color: orange;*/
+  width: 100vw;
+}
+.HomeDescricaoSection{
+  padding: 70px 0px;
+  padding-top: 150px;
 }

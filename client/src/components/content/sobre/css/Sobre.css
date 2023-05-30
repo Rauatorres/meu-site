@@ -1,0 +1,7 @@
+section{
+  overflow: hidden;
+}
+h1{
+  width: fit-content;
+  padding: 0.4rem 1.2rem;
+}

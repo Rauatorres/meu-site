@@ -1,19 +1,18 @@
-.Descricao{
+.HomeDescricao{
   padding: 0.5rem;
   box-sizing: border-box;
   background-color: #1D1D1D;
-  /*background-color: #DFDFDF;*/
   border: 1px solid #DFDFDF;
   border-radius: 5px;
-  /*color: black;*/
+  width: 90vw;
+  margin: auto;
 }
 
-.Descricao *{
+.HomeDescricao *{
   margin: 1rem 0.5rem;
 }
 
 .DescTitulo, .DescTexto{
-  /*background-color: darkgreen;*/
   width: fit-content;
 }
 .DescTitulo{
@@ -28,7 +27,6 @@
   padding: 0.8rem 1.4rem;
   font-size: 0.9rem;
   margin: 1.5rem 1rem;
-  /*color: #72FF36;*/
   border-color: transparent;
   background-color: #4C9E29;
   color: black;
@@ -40,5 +38,6 @@
 .DescButtonColor{
   color: black;
 }
+
 
 

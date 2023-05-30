@@ -1,0 +1,11 @@
+h1{
+  margin-top: 100px;
+}
+.ProjetoTitulo{
+  background-color: red;
+  width: fit-content;
+}
+
+.ProjetoImg{
+  width: 60vw;
+}

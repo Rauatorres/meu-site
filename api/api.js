@@ -5,7 +5,8 @@ bodyParser = require('body-parser'),
 {MongoClient} = require('mongodb'),
 ObjectId = require('mongodb').ObjectId,
 crypto = require('crypto'),
-fs = require('fs')
+fs = require('fs'),
+multiparty = require('connect-multiparty')
 
 
 app.use(bodyParser.urlencoded({extended: true}))
@@ -24,7 +25,8 @@ async function conectarAoBancoDeDados(){
 conectarAoBancoDeDados()
 
 const db = client.db('meu-site'),
-projetos = db.collection('projetos')
+projetos = db.collection('projetos'),
+tecnologias = db.collection('tecnologias')
 
 //script para adicionar chaves para ter acesso de administrador
 //retirar quando colocar em produção após adicionar a primeira chave
@@ -73,6 +75,7 @@ app.get('/api/projetos', async (req, res)=>{
 })
 
 app.get('/api/projetos/:id', async (req, res)=>{
+  res.setHeader('Access-Control-Allow-Origin', '*')
   try{
     let projetoRes = await projetos.find({_id: new ObjectId(req.params.id)}).toArray()
     res.json(projetoRes)
@@ -102,6 +105,28 @@ app.post('/api', async (req, res)=>{
     console.error(err)
     res.status(500).json({error: "Ops! Parece que ocorreu um erro interno"})
   }
+})
+
+app.get('/api/tecnologias', async (req, res)=>{
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  try{
+    let tecnologiasRes = await tecnologias.find().toArray()
+    res.json(tecnologiasRes)
+  }catch (err){
+    console.error(err)
+    res.status(500).json({error: "Ops! Parece que ocorreu um erro interno"})
+  }
+})
+
+app.get('/tecnologias_img/:img', (req, res)=>{
+  fs.readFile(`tecnologias_img/${req.params.img}`, (err, content)=>{
+    if(err){
+      res.status(500).json({error: err})
+      return
+    }
+    res.writeHead(200, {'content-type': 'img/jpg'})
+    res.end(content)
+  })
 })
 
 app.listen(porta, ()=>{

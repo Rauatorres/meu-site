@@ -30,6 +30,7 @@ export default props=>{
   
   function gerarProjetos(){
     return projetos.map(projeto=>{
+      console.log(projeto)
       return (
         <Projeto key={projeto.id} titulo={projeto.titulo} img={'http://localhost:3001/projetos_img/' + projeto.img} desc={projeto.descricao} />
         )
@@ -37,11 +38,12 @@ export default props=>{
   }
   
   return (
-    <section className='AreaProjetos'>
-      <h3 className='HomeTitulo TituloSecaoProjetos Fonte1'>Meus Projetos</h3>
-      {gerarProjetos()}
-      <button className="BotaoProjetos"><Link to='/projetos' className='Link BotaoProjetosColor'>Ver Mais Projetos <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "0.5rem"}}/></Link></button>
-      
+    <section className='AreaProjetosSection'>
+      <article className='AreaProjetos'>
+        <h3 className='HomeTitulo TituloSecaoProjetos Fonte1'>Meus Projetos</h3>
+        {gerarProjetos()}
+        <button className="BotaoProjetos"><Link to='/projetos' className='Link BotaoProjetosColor'>Ver Mais Projetos <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "0.5rem"}}/></Link></button>
+       </article>
     </section>
   )
 }
