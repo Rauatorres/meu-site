@@ -1,5 +1,4 @@
-footer{
-  /*background-color: #28169C;*/
+/* footer{
   background-color: #1D1D1D;
   border-top: 1px solid white;
   position: relative;
@@ -13,4 +12,30 @@ footer{
 }
 .LinkContatoColor{
   color: white;
+} */
+
+h3{
+  margin: 0px;
+  background-color: purple;
+  width: fit-content;
+}
+
+.FooterRedes, .FooterContato{
+  display: flex;
+  justify-content: space-between;
+}
+
+.FooterRedes{
+  background-color: red;
+}
+.FooterContato{
+  background-color: aqua;
+}
+.FooterCreditos{
+  background-color:chartreuse;
+}
+
+.TextoCreditos{
+  width: fit-content;
+  margin: auto;
 }
