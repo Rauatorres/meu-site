@@ -1,8 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
-import Descricao from './content/home/Descricao'
-import ProjetosArea from './content/home/ProjetosArea'
 import Home from './content/home/Home'
 import Sobre from './content/sobre/Sobre'
 import Projetos from './content/projetos/Projetos'
