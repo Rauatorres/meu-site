@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Descricao from './Descricao'
-import ProjetosArea from './ProjetosArea'
 import Sobre from './Sobre'
 import Habilidades from './Habilidades'
 import ChamadaProjetos from './ChamadaProjetos'
