@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    
+    <h1>Bem vindo à página de admin</h1>
+    <div>
+        <h2>Adicionar Tecnologia</h2>
+        <form action="/addtecnologia" method="post">
+            <label for="nomeTecnologia">
+                <h3>Nome</h3>
+                <input type="text" name="nome" id="nomeTecnologia">
+            </label>
+            <label for="tipoTecnologia">
+                <h3>Tipo</h3>
+                <select name="tipo" id="tipoTecnologia">
+                    <option value="front-end">Front-End</option>
+                    <option value="back-end">Back-End</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </label>
+            <input type="submit" value="Adicionar">
+        </form>
+    </div>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Img</th>
+        </tr>
+        <td></td>
+    </table>
+    
+</body>
+</html>

@@ -1,36 +1,55 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import Tecnologia from './Tecnologia'
 
-export default props=>
-<section>
-    <div>
-        <h2>Tecnologias</h2>
-        <h3>Conheça as tecnologias que eu utilizo</h3>
-    </div>
-    <div>
-        <div>
-            <h3>Front-End</h3>
+export default props=>{
+    const [listaTecnologias, setListaTecnologias] = useState([])
+
+    async function getListaTecnologias(){
+        let getLista = await axios.get('http://localhost:3001/api/projetos')
+        setListaTecnologias(getLista.data)
+    }
+
+    useEffect(()=>{
+        getListaTecnologias()
+    }, [])
+
+    function exibirTecnologias(tipo){
+        return listaTecnologias.map(tecnologia=>{
+            if(tipo == tecnologia.tipo){
+                return (
+                    <Tecnologia key={tecnologia._id} img={tecnologia.img} nome={tecnologia.titulo}/>
+                )
+            }
+        })
+    }
+
+    return (
+        <section>
             <div>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
+                <h2>Tecnologias</h2>
+                <h3>Conheça as tecnologias que eu utilizo</h3>
             </div>
-        </div>
-        <div>
-            <h3>Back-End</h3>
             <div>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
+                <div>
+                    <h3>Front-End</h3>
+                    <div>
+                        {exibirTecnologias('front-end')}
+                    </div>
+                </div>
+                <div>
+                    <h3>Back-End</h3>
+                    <div>
+                        {exibirTecnologias('back-end')}
+                    </div>
+                </div>
+                <div>
+                    <h3>Outras</h3>
+                    <div>
+                        {exibirTecnologias(undefined)}
+                    </div>
+                </div>
             </div>
-        </div>
-        <div>
-            <h3>Outras</h3>
-            <div>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
-                <Tecnologia img='meu_site.jpg' nome='teste'/>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
+    )
+}
