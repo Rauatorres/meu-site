@@ -1,16 +1,11 @@
 const {MongoClient} = require('mongodb')
 const ObjectId = require('mongodb').ObjectId
 const client = new MongoClient('mongodb+srv://rauatorres:meusite123@meu-site.twmm2ol.mongodb.net/?retryWrites=true&w=majority')
+const db = client.db('meu-site')
 
-module.exports = async ()=>{
+module.exports = {
     //configs banco de dados
-    await client.connect()
-    const db = client.db('meu-site')
-
-    return {
-        db: db,
-        projetos: db.collection('projetos'),
-        tecnologias: db.collection('tecnologias'),
-        ObjectId: ObjectId
-    }
+    client: client,
+    db: db,
+    ObjectId: ObjectId
 }

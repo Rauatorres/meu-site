@@ -15,6 +15,7 @@ consign().
     include('./configs/database.js').
     then('src/routes').
     then('src/controllers').
+    then('src/model').
     into(app)
 
 module.exports = app

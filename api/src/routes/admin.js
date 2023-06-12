@@ -3,7 +3,38 @@ module.exports = (app)=>{
         app.src.controllers.admin.index.home(app, req, res)
     })
 
-    app.post('/addtecnologia', (req, res)=>{
-        app.src.controllers.admin.index.addTecnologia(app, req, res)
+
+    app.post('/addprojeto', (req, res)=>{
+        app.src.controllers.admin.index.inserirProjeto(app, req, res)
     })
+
+    app.get('/delprojeto/:id', (req, res)=>{
+        app.src.controllers.admin.index.deletarProjeto(app, req, res)
+    })
+
+    app.get('/editarprojeto/:id', (req, res)=>{
+        app.src.controllers.admin.index.pageditar(app, req, res, 'projeto')
+    })
+
+    app.post('/editarprojeto/:id', (req, res)=>{
+        app.src.controllers.admin.index.editarProjeto(app, req, res)
+    })
+
+    app.post('/addtecnologia', (req, res)=>{
+        app.src.controllers.admin.index.inserirTecnologia(app, req, res)
+    })
+
+    app.get('/deltecnologia/:id', (req, res)=>{
+        app.src.controllers.admin.index.deletarTecnologia(app, req, res)
+    })
+
+    app.get('/editartecnologia/:id', (req, res)=>{
+        app.src.controllers.admin.index.pageditar(app, req, res, 'tecnologia')
+    })
+
+    app.post('/editartecnologia/:id', (req, res)=>{
+        app.src.controllers.admin.index.editarTecnologia(app, req, res)
+    })
+
+
 }

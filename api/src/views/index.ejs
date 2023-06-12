@@ -10,11 +10,55 @@
     
     <h1>Bem vindo à página de admin</h1>
     <div>
+        <h2>Adicionar Projeto</h2>
+        <form action="/addprojeto" method="post">
+            <label for="nomeProjeto">
+                <h3>Nome</h3>
+                <input type="text" name="titulo" id="nomeProjeto">
+            </label>
+            <label for="imgProjeto">
+                <h3>Imagem</h3>
+                <input type="file" name="img" id="imgProjeto">
+            </label>
+            <label for="descProjeto">
+                <h3>Descrição</h3>
+                <textarea name="descricao" id="descProjeto" rows="10"></textarea>
+            </label>
+            <label for="linkProjeto">
+                <h3>Link</h3>
+                <input type="url" name="link" id="linkProjeto">
+            </label>
+            <input type="submit" value="Adicionar">
+        </form>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Imagem</th>
+                <th>Descrição</th>
+                <th>Link</th>
+            </tr>
+            <% projetos.forEach(projeto => { %>
+                <tr>
+                    <td><%= projeto.titulo %></td>
+                    <td><%= projeto.img %></td>
+                    <td><%= projeto.descricao %></td>
+                    <td><%= projeto.link %></td>
+                    <td><a href="/editarprojeto/<%= projeto._id %>">editar</a></td>
+                    <td><a href="/delprojeto/<%= projeto._id %>">excluir</a></td>
+                </tr>
+            <% }) %> 
+        </table>
+    </div>
+    <div>
         <h2>Adicionar Tecnologia</h2>
         <form action="/addtecnologia" method="post">
             <label for="nomeTecnologia">
                 <h3>Nome</h3>
                 <input type="text" name="nome" id="nomeTecnologia">
+            </label>
+            <label for="imgTecnologia">
+                <h3>Imagem</h3>
+                <input type="file" name="img" id="imgTecnologia">
             </label>
             <label for="tipoTecnologia">
                 <h3>Tipo</h3>
@@ -26,15 +70,23 @@
             </label>
             <input type="submit" value="Adicionar">
         </form>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Img</th>
+            </tr>
+            <% tecnologias.forEach(tecnologia => { %>
+                <tr>
+                    <td><%= tecnologia.nome %></td>
+                    <td><%= tecnologia.tipo %></td>
+                    <td><%= tecnologia.img %></td>
+                    <td><a href="/editartecnologia/<%= tecnologia._id %>">editar</a></td>
+                    <td><a href="/deltecnologia/<%= tecnologia._id %>">excluir</a></td>
+                </tr>
+            <% }) %> 
+        </table>
     </div>
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Tipo</th>
-            <th>Img</th>
-        </tr>
-        <td></td>
-    </table>
     
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+</head>
+<body>
+    <% if(col == 'projeto'){ %>
+        <h1>Editar Projeto</h1>
+        <form action="/editarprojeto/<%= projeto._id %>" method="post">
+            <label for="tituloProjeto">
+                <h3>Título</h3>
+                <input type="text" name="titulo" id="tituloProjeto" value="<%= projeto.titulo %>">
+            </label>
+            <label for="imgProjeto">
+                <h3>Imagem</h3>
+                <input type="file" name="img" id="imgProjeto">
+            </label>
+            <label for="descProjeto">
+                <h3>Descrição</h3>
+                <textarea name="descricao" id="descProjeto" rows="10"><%= projeto.descricao %></textarea>
+            </label>
+            <label for="linkProjeto">
+                <h3>Link</h3>
+                <input type="url" name="link" id="linkProjeto" value="<%= projeto.link %>">
+            </label>
+            <input type="submit" value="Editar">
+        </form>
+    <% }else if(col == 'tecnologia'){ %>
+        <h1>Editar Tecnologia</h1>
+        <form action="/editartecnologia/<%= tecnologia._id %>" method="post">
+            <label for="nomeTecnologia">
+                <h3>Nome</h3>
+                <input type="text" name="nome" id="nomeTecnologia" value="<%= tecnologia.nome %>">
+            </label>
+            <label for="imgTecnologia">
+                <h3>Imagem</h3>
+                <input type="file" name="img" id="imgTecnologia" value="<%= tecnologia.img %>">
+            </label>
+            <label for="tipoTecnologia">
+                <h3>Tipo</h3>
+                <select name="tipo" id="tipoTecnologia">
+                    
+                    <option value="front-end" <% if(tecnologia.tipo == "front-end"){ %>selected<% } %>>Front-End</option>
+                    <option value="back-end" <% if(tecnologia.tipo == "back-end"){ %>selected<% } %>>Back-End</option>
+                    <option value="outro" <% if(tecnologia.tipo != "front-end" && tecnologia.tipo != "back-end"){ %>selected<% } %>>Outro</option>
+                </select>
+            </label>
+            <input type="submit" value="Editar">
+        </form>
+    <% } %>
+</body>
+</html>
