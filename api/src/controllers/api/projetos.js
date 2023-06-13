@@ -12,7 +12,7 @@ module.exports.getProjetos = async (app, req, res) => {
 
 module.exports.getProjetoImg = async (app, req, res) => {
     const fs = require('fs')
-    fs.readFile(`projetos_img/${req.params.img}`, (err, content)=>{
+    fs.readFile(`api_img/projetos/${req.params.img}`, (err, content)=>{
         if(err){
             res.status(500).json({error: err})
             return

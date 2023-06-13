@@ -9,13 +9,14 @@
 <body>
     <% if(col == 'projeto'){ %>
         <h1>Editar Projeto</h1>
-        <form action="/editarprojeto/<%= projeto._id %>" method="post">
+        <form action="/editarprojeto/<%= projeto._id %>" method="post" enctype="multipart/form-data">
             <label for="tituloProjeto">
                 <h3>Título</h3>
                 <input type="text" name="titulo" id="tituloProjeto" value="<%= projeto.titulo %>">
             </label>
             <label for="imgProjeto">
                 <h3>Imagem</h3>
+                <input type="hidden" name="img_old" value="<%= projeto.img %>">
                 <input type="file" name="img" id="imgProjeto">
             </label>
             <label for="descProjeto">
@@ -30,14 +31,15 @@
         </form>
     <% }else if(col == 'tecnologia'){ %>
         <h1>Editar Tecnologia</h1>
-        <form action="/editartecnologia/<%= tecnologia._id %>" method="post">
+        <form action="/editartecnologia/<%= tecnologia._id %>" method="post" enctype="multipart/form-data">
             <label for="nomeTecnologia">
                 <h3>Nome</h3>
                 <input type="text" name="nome" id="nomeTecnologia" value="<%= tecnologia.nome %>">
             </label>
             <label for="imgTecnologia">
                 <h3>Imagem</h3>
-                <input type="file" name="img" id="imgTecnologia" value="<%= tecnologia.img %>">
+                <input type="hidden" name="img_old" value="<%= tecnologia.img %>">
+                <input type="file" name="img" id="imgTecnologia">
             </label>
             <label for="tipoTecnologia">
                 <h3>Tipo</h3>

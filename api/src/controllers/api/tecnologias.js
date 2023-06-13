@@ -14,7 +14,7 @@ module.exports.getTecnologias = async (app, req, res) => {
 
 module.exports.getTecnologiaImg = async (app, req, res) => {
   const fs = require('fs')
-  fs.readFile(`tecnologias_img/${req.params.img}`, (err, content)=>{
+  fs.readFile(`api_img/tecnologias/${req.params.img}`, (err, content)=>{
       if(err){
           res.status(500).json({error: err})
           return
