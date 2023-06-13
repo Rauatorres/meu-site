@@ -1,6 +1,12 @@
 module.exports = (app)=>{
     app.get('/', async (req, res)=>{
+        app.src.controllers.admin.index.index(app, req, res)
+    })
+    app.get('/home', async (req, res)=>{
         app.src.controllers.admin.index.home(app, req, res)
+    })
+    app.post('/login', async (req, res)=>{
+        app.src.controllers.admin.index.login(app, req, res)
     })
 
 

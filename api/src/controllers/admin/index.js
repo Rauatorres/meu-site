@@ -1,119 +1,203 @@
-module.exports.home = async (app, req, res)=>{
-    const ProjetosDAO = new app.src.model.ProjetosDAO()
-    const TecnologiasDAO = new app.src.model.TecnologiasDAO()
+//  página inicial
 
-    let projetos = await ProjetosDAO.mostrarTodos()
-    let tecnologias = await TecnologiasDAO.mostrarTodos()
-    res.render('index', {projetos: projetos, tecnologias: tecnologias})
+module.exports.index = (app, req, res)=>{
+    req.session.authorized = false
+    res.render('index', {tentativaLogin: false})
 }
 
-module.exports.pageditar = async ( app, req, res, col)=>{
-    if(col == 'projeto'){
+module.exports.home = async (app, req, res)=>{
+    if(req.session.authorized){
         const ProjetosDAO = new app.src.model.ProjetosDAO()
-        
-        let projeto = await ProjetosDAO.mostrar({_id: req.params.id})
+        const TecnologiasDAO = new app.src.model.TecnologiasDAO()
     
-        res.render('editar', {col: col, projeto: projeto})
+        let projetos = await ProjetosDAO.mostrarTodos()
+        let tecnologias = await TecnologiasDAO.mostrarTodos()
+        res.render('home', {projetos: projetos, tecnologias: tecnologias})
+    }else{
+        res.redirect('/')
+    }
+}
+
+module.exports.login = async (app, req, res)=>{
+    const crypto = require('crypto')
+    const dbconnect = require('../../../configs/database.js')
+    await dbconnect.client.connect()
+    const adminkeys = dbconnect.db.collection('adminkeys')
+
+    const encriptedAdminkey = crypto.createHash('md5').update(req.body.adminkey).digest('hex')
+
+    const response = await adminkeys.findOne({key: encriptedAdminkey})
+    await dbconnect.client.close()
+
+    if(response != null){
+        req.session.authorized = true
+        res.redirect('/home')
         return
     }
-    const TecnologiasDAO = new app.src.model.TecnologiasDAO()
-    
-    let tecnologia = await TecnologiasDAO.mostrar({_id: req.params.id})
 
-    res.render('editar', {col: col, tecnologia: tecnologia})
-    
+    res.render('index', {tentativaLogin: true})
+}
+
+// script para gerar uma chave de login
+/* module.exports.login = async (app, req, res)=>{
+    const crypto = require('crypto')
+    const dbconnect = require('../../../configs/database.js')
+    await dbconnect.client.connect()
+    const adminkeys = dbconnect.db.collection('adminkeys')
+
+    const encriptedAdminkey = crypto.createHash('md5').update(req.body.adminkey).digest('hex')
+
+    await adminkeys.insertOne({key: encriptedAdminkey})
+    await dbconnect.client.close()
+
+
+    res.redirect('/')
+} */
+
+//  página para editar modelos
+
+module.exports.pageditar = async ( app, req, res, col)=>{
+    if(req.session.authorized){
+        if(col == 'projeto'){
+            const ProjetosDAO = new app.src.model.ProjetosDAO()
+            
+            let projeto = await ProjetosDAO.mostrar({_id: req.params.id})
+        
+            res.render('editar', {col: col, projeto: projeto})
+            return
+        }
+        const TecnologiasDAO = new app.src.model.TecnologiasDAO()
+        
+        let tecnologia = await TecnologiasDAO.mostrar({_id: req.params.id})
+
+        res.render('editar', {col: col, tecnologia: tecnologia})
+        return
+    }else{
+        res.redirect('/')
+    }
 }
 
 // projetos
 
 module.exports.inserirProjeto = async (app, req, res)=>{
-    const fs = require('fs')
-    const path = require('node:path')
-    const ProjetosDAO = new app.src.model.ProjetosDAO()
-    let timestamp = Date.now()
-    
-    let imgFileName = timestamp + '_' + req.files.img.name
-    let newPath = path.normalize(__dirname + '/../../../api_img/projetos')
+    if(req.session.authorized){
+        const fs = require('fs')
+        const path = require('node:path')
+        const ProjetosDAO = new app.src.model.ProjetosDAO()
+        let timestamp = Date.now()
+        
+        let imgFileName = timestamp + '_' + req.files.img.name
+        let newPath = path.normalize(__dirname + '/../../../api_img/projetos')
 
-    await fs.promises.rename(req.files.img.path, `${newPath}/${imgFileName}`)
+        await fs.promises.rename(req.files.img.path, `${newPath}/${imgFileName}`)
 
-    req.body.img = imgFileName
+        req.body.img = imgFileName
 
-    await ProjetosDAO.inserir(req.body)
-    res.redirect('/')
+        await ProjetosDAO.inserir(req.body)
+        res.redirect('/home')
+        return
+    }else{
+        res.redirect('/')
+    }
 }
 
 module.exports.deletarProjeto = async (app, req, res)=>{
-    const ProjetosDAO = new app.src.model.ProjetosDAO()
-  
-    await ProjetosDAO.deletar({_id: req.params.id})
-    res.redirect('/')
+    
+    if(req.session.authorized){
+        const ProjetosDAO = new app.src.model.ProjetosDAO()
+    
+        await ProjetosDAO.deletar({_id: req.params.id})
+        res.redirect('/home')
+        return
+    }else{
+        res.redirect('/')
+    }
 }
 
 module.exports.editarProjeto = async (app, req, res)=>{
-    const fs = require('fs')
-    const path = require('node:path')
-    const ProjetosDAO = new app.src.model.ProjetosDAO()
-    let documento = await ProjetosDAO.mostrar({_id: req.params.id})
-    let timestamp = Date.now()
-    let { body } = req
-    
-    let imgFileName = timestamp + '_' + req.files.img.name
-    let newPath = path.normalize(__dirname + '/../../../api_img/projetos')
+    if(req.session.authorized){
+        const fs = require('fs')
+        const path = require('node:path')
+        const ProjetosDAO = new app.src.model.ProjetosDAO()
+        let documento = await ProjetosDAO.mostrar({_id: req.params.id})
+        let timestamp = Date.now()
+        let { body } = req
+        
+        let imgFileName = timestamp + '_' + req.files.img.name
+        let newPath = path.normalize(__dirname + '/../../../api_img/projetos')
 
-    await fs.promises.rename(req.files.img.path, `${newPath}/${imgFileName}`)
-    await fs.promises.unlink(`${newPath}/${body.img_old}`)
+        await fs.promises.rename(req.files.img.path, `${newPath}/${imgFileName}`)
+        await fs.promises.unlink(`${newPath}/${body.img_old}`)
 
-    body.img = imgFileName
-    delete body.img_old
+        body.img = imgFileName
+        delete body.img_old
 
-    await ProjetosDAO.editar(documento, body)
-    res.redirect('/')
+        await ProjetosDAO.editar(documento, body)
+        res.redirect('/home')
+        return
+    }else{
+        res.redirect('/')
+    }
 }
 
 // tecnologias
 
 module.exports.inserirTecnologia = async (app, req, res)=>{
-    const fs = require('fs')
-    const path = require('node:path')
-    const TecnologiasDAO = new app.src.model.TecnologiasDAO()
-    let timestamp = Date.now()
-    
-    let imgFileName = timestamp + '_' + req.files.img.name
-    let newPath = path.normalize(__dirname + '/../../../api_img/tecnologias')
+    if(req.session.authorized){
+        const fs = require('fs')
+        const path = require('node:path')
+        const TecnologiasDAO = new app.src.model.TecnologiasDAO()
+        let timestamp = Date.now()
+        
+        let imgFileName = timestamp + '_' + req.files.img.name
+        let newPath = path.normalize(__dirname + '/../../../api_img/tecnologias')
 
-    await fs.promises.rename(req.files.img.path, `${newPath}/${imgFileName}`)
+        await fs.promises.rename(req.files.img.path, `${newPath}/${imgFileName}`)
 
-    req.body.img = imgFileName
+        req.body.img = imgFileName
 
-    await TecnologiasDAO.inserir(req.body)
-    res.redirect('/')
+        await TecnologiasDAO.inserir(req.body)
+        res.redirect('/home')
+        return
+    }else{
+        res.redirect('/')
+    }
 }
 
 module.exports.deletarTecnologia = async (app, req, res)=>{
-    const TecnologiasDAO = new app.src.model.TecnologiasDAO()
-  
-    await TecnologiasDAO.deletar({_id: req.params.id})
-    res.redirect('/')
+    if(req.session.authorized){
+        const TecnologiasDAO = new app.src.model.TecnologiasDAO()
+    
+        await TecnologiasDAO.deletar({_id: req.params.id})
+        res.redirect('/home')
+        return
+    }else{
+        res.redirect('/')
+    }
 }
 
 module.exports.editarTecnologia = async (app, req, res)=>{
-    const fs = require('fs')
-    const path = require('node:path')
-    const TecnologiasDAO = new app.src.model.TecnologiasDAO()
-    let documento = await TecnologiasDAO.mostrar({_id: req.params.id})
-    let timestamp = Date.now()
-    let { body } = req
-    
-    let imgFileName = timestamp + '_' + req.files.img.name
-    let newPath = path.normalize(__dirname + '/../../../api_img/tecnologias')
+    if(req.session.authorized){
+        const fs = require('fs')
+        const path = require('node:path')
+        const TecnologiasDAO = new app.src.model.TecnologiasDAO()
+        let documento = await TecnologiasDAO.mostrar({_id: req.params.id})
+        let timestamp = Date.now()
+        let { body } = req
+        
+        let imgFileName = timestamp + '_' + req.files.img.name
+        let newPath = path.normalize(__dirname + '/../../../api_img/tecnologias')
 
-    await fs.promises.rename(req.files.img.path, `${newPath}/${imgFileName}`)
-    await fs.promises.unlink(`${newPath}/${body.img_old}`)
+        await fs.promises.rename(req.files.img.path, `${newPath}/${imgFileName}`)
+        await fs.promises.unlink(`${newPath}/${body.img_old}`)
 
-    body.img = imgFileName
-    delete body.img_old
+        body.img = imgFileName
+        delete body.img_old
 
-    await TecnologiasDAO.editar(documento, body)
-    res.redirect('/')
+        await TecnologiasDAO.editar(documento, body)
+        res.redirect('/home')
+        return
+    }else{
+        res.redirect('/')
+    }
 }
