@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#titulo_da_pagina{
+    background-color: red;
+    width: fit-content;
+    margin: 20px auto;
+    margin-top: 40px;
+    font-size: 3rem;
+}
+
+#area_formularios{
+    margin: auto;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+#area_formulario_projetos, #area_formulario_tecnologias{
+    width: 50vw;
+    margin: 30px 0;
+}
+
+#area_formulario_projetos{
+    background-color: green;
+}
+#area_formulario_tecnologias{
+    background-color: gold;
+}
+
+h2, form, table{
+    width: fit-content;
+    margin: 1rem auto;
+}
+h2{
+    background-color: cyan;
+    font-size: 2rem;
+}
+form{
+    background-color: blueviolet;
+    padding: 1.5rem;
+    padding-top: 0.5em;
+}
+label{
+    display: block;
+    margin: 1rem 0;
+}
+h3{
+    font-size: 1.3rem;
+    margin: 0.4rem 0;
+}
+input, textarea, select{
+    font-size: 1rem;
+    margin: 0.2rem 0;
+    padding: 0.4rem;
+    width: 25vw;
+}
+.submit{
+    margin: 0.2rem auto;
+    width: 26vw;
+    font-size: 1.2rem;
+}
+
+table{
+    background-color: darkseagreen;
+}
+th, td{
+    padding: 0.3rem;
+}
+th{
+    font-size: 1.1rem;
+}
+#tabela_projetos td{
+    max-width: 10vw;
+    word-wrap: break-word;
+}
