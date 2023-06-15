@@ -19,7 +19,7 @@ module.exports.getTecnologiaImg = async (app, req, res) => {
           res.status(500).json({error: err})
           return
       }
-      res.writeHead(200, {'content-type': 'img/jpg'})
+      res.writeHead(200, {'content-type': 'image/jpg'})
       res.end(content)
   })
 }
