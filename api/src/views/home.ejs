@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/home.css">
 </head>
 <body>
     
-    <h1 id="titulo_da_pagina">Bem vindo à página de admin</h1>
+    <h1 class="titulo_da_pagina fonte_branca">Bem vindo à página de admin</h1>
     <div id="area_formularios">
 
         <div id="area_formulario_projetos">
-            <h2>Adicionar Projeto</h2>
+            <h2 class="fonte_branca">Adicionar Projeto</h2>
             <form action="/addprojeto" method="post" enctype="multipart/form-data">
                 <label for="nomeProjeto">
                     <h3>Nome</h3>
@@ -53,7 +53,7 @@
             </table>
         </div>
         <div id="area_formulario_tecnologias">
-            <h2>Adicionar Tecnologia</h2>
+            <h2 class="fonte_branca">Adicionar Tecnologia</h2>
             <form action="/addtecnologia" method="post" enctype="multipart/form-data">
                 <label for="nomeTecnologia">
                     <h3>Nome</h3>
@@ -77,7 +77,7 @@
                 <tr>
                     <th>Nome</th>
                     <th>Tipo</th>
-                    <th>Img</th>
+                    <th>Image</th>
                 </tr>
                 <% tecnologias.forEach(tecnologia => { %>
                     <tr>

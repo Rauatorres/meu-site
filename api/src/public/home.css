@@ -4,8 +4,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#titulo_da_pagina{
-    background-color: red;
+body{
+    background-color: rgb(51, 219, 205);
+}
+.fonte_branca{
+    color: white;
+}
+
+.titulo_da_pagina{
     width: fit-content;
     margin: 20px auto;
     margin-top: 40px;
@@ -14,7 +20,6 @@
 
 #area_formularios{
     margin: auto;
-    background-color: blue;
     display: flex;
     justify-content: space-between;
 }
@@ -24,23 +29,15 @@
     margin: 30px 0;
 }
 
-#area_formulario_projetos{
-    background-color: green;
-}
-#area_formulario_tecnologias{
-    background-color: gold;
-}
-
 h2, form, table{
     width: fit-content;
     margin: 1rem auto;
 }
 h2{
-    background-color: cyan;
     font-size: 2rem;
 }
 form{
-    background-color: blueviolet;
+    background-color: white;
     padding: 1.5rem;
     padding-top: 0.5em;
 }
@@ -63,17 +60,29 @@ input, textarea, select{
     width: 26vw;
     font-size: 1.2rem;
 }
-
-table{
-    background-color: darkseagreen;
+.botao_voltar_link{
+    display: block;
+    width: fit-content;
+    margin-top: 1rem;
 }
+.botao_voltar{
+    width: 5vw;
+    padding: 0.5rem;
+    
+}
+
 th, td{
     padding: 0.3rem;
 }
 th{
     font-size: 1.1rem;
 }
-#tabela_projetos td{
-    max-width: 10vw;
+#tabela_projetos, #tabela_tecnologias{
     word-wrap: break-word;
+}
+#tabela_projetos td{
+    max-width: 7vw;
+}
+#tabela_tecnologias td{
+    max-width: 13vw;
 }

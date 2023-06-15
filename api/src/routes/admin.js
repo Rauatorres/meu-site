@@ -11,11 +11,11 @@ module.exports = (app)=>{
 
 
     app.post('/addprojeto', (req, res)=>{
-        app.src.controllers.admin.index.inserirProjeto(app, req, res)
+        app.src.controllers.admin.projetos.inserirProjeto(app, req, res)
     })
 
     app.get('/delprojeto/:id', (req, res)=>{
-        app.src.controllers.admin.index.deletarProjeto(app, req, res)
+        app.src.controllers.admin.projetos.deletarProjeto(app, req, res)
     })
 
     app.get('/editarprojeto/:id', (req, res)=>{
@@ -23,15 +23,15 @@ module.exports = (app)=>{
     })
 
     app.post('/editarprojeto/:id', (req, res)=>{
-        app.src.controllers.admin.index.editarProjeto(app, req, res)
+        app.src.controllers.admin.projetos.editarProjeto(app, req, res)
     })
 
     app.post('/addtecnologia', (req, res)=>{
-        app.src.controllers.admin.index.inserirTecnologia(app, req, res)
+        app.src.controllers.admin.tecnologias.inserirTecnologia(app, req, res)
     })
 
     app.get('/deltecnologia/:id', (req, res)=>{
-        app.src.controllers.admin.index.deletarTecnologia(app, req, res)
+        app.src.controllers.admin.tecnologias.deletarTecnologia(app, req, res)
     })
 
     app.get('/editartecnologia/:id', (req, res)=>{
@@ -39,7 +39,7 @@ module.exports = (app)=>{
     })
 
     app.post('/editartecnologia/:id', (req, res)=>{
-        app.src.controllers.admin.index.editarTecnologia(app, req, res)
+        app.src.controllers.admin.tecnologias.editarTecnologia(app, req, res)
     })
 
 

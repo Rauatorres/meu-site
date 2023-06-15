@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar</title>
+    <link rel="stylesheet" href="/home.css">
 </head>
 <body>
     <% if(col == 'projeto'){ %>
-        <h1>Editar Projeto</h1>
+        <h1 class="titulo_da_pagina fonte_branca">Editar Projeto</h1>
         <form action="/editarprojeto/<%= projeto._id %>" method="post" enctype="multipart/form-data">
             <label for="tituloProjeto">
                 <h3>Título</h3>
@@ -28,9 +29,11 @@
                 <input type="url" name="link" id="linkProjeto" value="<%= projeto.link %>">
             </label>
             <input type="submit" value="Editar">
+            <a href="/home" class="botao_voltar_link"><input type="button" value="Voltar" class="botao_voltar"></a>
+
         </form>
     <% }else if(col == 'tecnologia'){ %>
-        <h1>Editar Tecnologia</h1>
+        <h1 class="titulo_da_pagina fonte_branca">Editar Tecnologia</h1>
         <form action="/editartecnologia/<%= tecnologia._id %>" method="post" enctype="multipart/form-data">
             <label for="nomeTecnologia">
                 <h3>Nome</h3>
@@ -51,6 +54,7 @@
                 </select>
             </label>
             <input type="submit" value="Editar">
+            <a href="/home" class="botao_voltar_link"><input type="button" value="Voltar" class="botao_voltar"></a>
         </form>
     <% } %>
 </body>
