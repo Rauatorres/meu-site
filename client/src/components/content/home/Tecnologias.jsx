@@ -6,7 +6,7 @@ export default props=>{
     const [listaTecnologias, setListaTecnologias] = useState([])
 
     async function getListaTecnologias(){
-        let getLista = await axios.get('http://localhost:3001/api/projetos')
+        let getLista = await axios.get('http://localhost:3001/api/tecnologias')
         setListaTecnologias(getLista.data)
     }
 
@@ -46,7 +46,7 @@ export default props=>{
                 <div>
                     <h3>Outras</h3>
                     <div>
-                        {exibirTecnologias(undefined)}
+                        {exibirTecnologias('outro')}
                     </div>
                 </div>
             </div>
