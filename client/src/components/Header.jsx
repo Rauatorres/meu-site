@@ -11,15 +11,15 @@ import Logo from './img/Logo.png'
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle'
 
 export default props =>
-  <Navbar expand='sm'>
+  <Navbar expand='sm' className="Navbar">
     <Container>
       <Navbar.Brand>Logo</Navbar.Brand>
-      <Navbar.Toggle aria-controls='navbar'/>
+      <Navbar.Toggle aria-controls='navbar' className='MenuButton'/>
       <Navbar.Collapse id='navbar'>
         <Nav>
-          <Nav.Link href='/'>home</Nav.Link>
-          <Nav.Link href='/projetos'>projetos</Nav.Link>
-          <Nav.Link href='/contato'>contato</Nav.Link>
+          <Nav.Link className='NavLink' href='/'>home</Nav.Link>
+          <Nav.Link className='NavLink' href='/projetos'>projetos</Nav.Link>
+          <Nav.Link className='NavLink' href='/contato'>contato</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>

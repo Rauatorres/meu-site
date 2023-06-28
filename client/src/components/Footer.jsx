@@ -10,17 +10,17 @@ import './css/Footer.css'
 export default props=>
 <footer>
   <div className='FooterRedes'>
-    <h3>Minhas Redes</h3>
-    <div>
-      <span><Link to='https://github.com/Rauatorres' target='_blank'><FontAwesomeIcon icon={faGithub} /></Link></span>
-      <span><Link to='https://www.linkedin.com/in/rauatorres/' target='_blank'><FontAwesomeIcon icon={faLinkedinIn} /></Link></span>
+    <h3 className='FooterTitulo'>Minhas Redes</h3>
+    <div className='FooterRedesIcones FooterLinkArea'>
+      <span><Link className='Link' to='https://github.com/Rauatorres' target='_blank'><FontAwesomeIcon icon={faGithub} /></Link></span>
+      <span><Link className='Link' to='https://www.linkedin.com/in/rauatorres/' target='_blank'><FontAwesomeIcon icon={faLinkedinIn} /></Link></span>
     </div>
   </div>
   <div className='FooterContato'>
-    <h3>Contato</h3>
-    <Link to='/contato'><FontAwesomeIcon icon={faEnvelope}/> Envie Sua Mensagem</Link>
+    <h3 className='FooterTitulo'>Contato</h3>
+    <span className='FooterLinkArea'><Link to='/contato' className='Link FooterLinkContato'><FontAwesomeIcon icon={faEnvelope}/> Envie Sua Mensagem</Link></span>
   </div>
   <div className='FooterCreditos'>
-    <div className='TextoCreditos'>Site Criado por Rauã Torres</div>
+    <div className='TextoCreditos'>Site Criado por <strong>Rauã Torres</strong></div>
   </div>
 </footer>

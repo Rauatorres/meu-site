@@ -1,15 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Projeto from './Projeto'
+import axios from 'axios'
 
-export default props=>
-<section>
-    <Projeto titulo='Teste' img='meu_site.jpg'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ipsam ipsa explicabo. Incidunt dignissimos nisi, ullam ducimus facere consequatur laboriosam amet accusamus atque voluptatum, voluptate cum maxime vel voluptatem repellat!
-    </Projeto>
-    <Projeto titulo='Teste' img='meu_site.jpg'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ipsam ipsa explicabo. Incidunt dignissimos nisi, ullam ducimus facere consequatur laboriosam amet accusamus atque voluptatum, voluptate cum maxime vel voluptatem repellat!
-    </Projeto>
-    <Projeto titulo='Teste' img='meu_site.jpg'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ipsam ipsa explicabo. Incidunt dignissimos nisi, ullam ducimus facere consequatur laboriosam amet accusamus atque voluptatum, voluptate cum maxime vel voluptatem repellat!
-    </Projeto>
-</section>
+export default props=>{
+    const [projetosLista, setProjetosLista] = useState([])
+
+    async function getProjetosLista(){
+        let res = await axios.get('http://localhost:3001/api/projetos')
+        setProjetosLista(res.data)
+    }
+
+    useEffect(async ()=>{
+        await getProjetosLista()
+    }, [])
+
+
+
+
+    return (
+        <section>
+            {
+                projetosLista.map(projeto=>{
+                    return (
+                        <Projeto titulo={projeto.titulo} img={projeto.img} link={projeto.link}>
+                            {projeto.descricao}
+                        </Projeto>
+                    )
+                })
+            }
+        </section>
+    )
+}

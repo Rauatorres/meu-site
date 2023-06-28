@@ -1,6 +1,9 @@
 main{
   /*background-color: blue;*/
   margin-top: 0px;
+  margin: 2rem 0;
+  position: relative;
+  min-height: 100vh;
 }
 section{
   /*background-color: orange;*/
