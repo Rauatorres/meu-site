@@ -5,6 +5,6 @@ import './css/Projetos.css'
 
 export default props=>
 <>
-    <h1>Meus Projetos</h1>
+    <div className='AreaTituloProjetos'><h1 className='Fonte2'>Meus Projetos</h1></div>
     <AreaProjetos/>
 </>

@@ -18,7 +18,7 @@ export default props=>{
 
 
     return (
-        <section>
+        <section className='ProjetosSection'>
             {
                 projetosLista.map(projeto=>{
                     return (

@@ -1,27 +1,60 @@
+.AreaTituloProjetos{
+    background-color: black;
+    color: white;
+    padding: 5rem 0;
+}
 h1{
-    background-color: gold;
     width: fit-content;
-    margin: auto;
+    margin: 0px auto;
+    font-size: 2.3rem;
+}
+
+.ProjetosSection{
+    padding: 0.1px;
+    background-color: rgb(242, 242, 242);
 }
 
 .Projeto{
-    background-color: red;
+    background-color: white;
     width: fit-content;
-    margin: 2rem auto;
+    margin: 5rem auto;
+    border-radius: 0px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .ProjetoTitulo{
-    background-color: green;
+    /* background-color: green; */
     width: fit-content;
+    color: rgb(104, 23, 196);
+    font-size: 1.7rem;
 }
 .ProjetoImg{
     width: 90vw;
+    border-radius: 0;
 }
 .ProjetoDesc{
-    background-color: blue;
+    /* background-color: blue; */
     width: 80vw;
-    margin: auto;
+    margin: 0.8rem auto;
+    height: 90px;
+    overflow: scroll;
+    font-size: 1.2rem;
 }
 .ProjetoBotao{
     width: 60vw;
-    margin: 1rem auto;
+    margin: 1.6rem 10vw;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+    border-radius: 0;
+    background-color: rgb(104, 23, 196);
+    border-color: rgb(104, 23, 196);
+    color: white;
+}
+.ProjetoBotao:hover{
+/*     
+    background-color: rgb(11, 165, 78);
+    border-color: rgb(11, 165, 78); */
+    background-color: rgb(71, 16, 134);
+    border-color: rgb(71, 16, 134);
+    color: white;
 }
