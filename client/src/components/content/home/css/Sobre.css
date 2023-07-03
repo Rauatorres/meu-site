@@ -1,0 +1,32 @@
+.HomeSobreSecao{
+    background-color: white;
+    color: black;
+    padding: 2rem 1rem;
+}
+
+.HomeSobreTitulo{
+    width: fit-content;
+    font-size: 3.5rem;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+}
+.HomeSobreDescricao{
+    /* width: 70vw; */
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
+.HomeSobrePalavraFullstack{
+    color: rgb(104, 23, 196);
+}
+.HomeSobrePalavraJavascript{
+    color: rgb(238, 183, 2);
+}
+.HomeSobreButtonProjetos{
+    background-color: rgb(104, 23, 196);
+    border-color: rgb(104, 23, 196);
+    font-size: 1.2rem;
+    padding: 0.7rem 1.3rem;
+    margin-top: 0.7rem;
+    margin-bottom: 2rem;
+}
