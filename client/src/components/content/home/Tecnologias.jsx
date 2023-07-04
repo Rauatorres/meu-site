@@ -21,7 +21,7 @@ export default props=>{
         return listaTecnologias.map(tecnologia=>{
             if(tipo == tecnologia.tipo){
                 return (
-                    <Tecnologia key={tecnologia._id} img={tecnologia.img} nome={tecnologia.nome}/>
+                    <Tecnologia key={tecnologia._id} img={tecnologia.img} nome={tecnologia.nome} link_original={tecnologia.credito}/>
                 )
             }
         })
