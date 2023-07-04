@@ -71,6 +71,10 @@
                         <option value="outro">Outro</option>
                     </select>
                 </label>
+                <label for="creditoTecnologia">
+                    <h3>Link Original</h3>
+                    <input type="link" name="credito" id="creditoTecnologia">
+                </label>
                 <input type="submit" value="Adicionar" class="submit">
             </form>
             <table id="tabela_tecnologias">
@@ -78,12 +82,14 @@
                     <th>Nome</th>
                     <th>Tipo</th>
                     <th>Image</th>
+                    <th>Link Original</th>
                 </tr>
                 <% tecnologias.forEach(tecnologia => { %>
                     <tr>
                         <td><%= tecnologia.nome %></td>
                         <td><%= tecnologia.tipo %></td>
                         <td><%= tecnologia.img %></td>
+                        <td><%= tecnologia.credito %></td>
                         <td><a href="/editartecnologia/<%= tecnologia._id %>">editar</a></td>
                         <td><a href="/deltecnologia/<%= tecnologia._id %>">excluir</a></td>
                     </tr>

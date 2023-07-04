@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Tecnologia from './Tecnologia'
+import TecnologiaAreaTipo from './TecnologiaAreaTipo'
+
+import './css/Tecnologias.css'
 
 export default props=>{
     const [listaTecnologias, setListaTecnologias] = useState([])
@@ -25,30 +28,14 @@ export default props=>{
     }
 
     return (
-        <section>
+        <section className='HomeTecnologiasSection'>
             <div>
-                <h2>Tecnologias</h2>
-                <h3>Conheça as tecnologias que eu utilizo</h3>
+                <h2 className='HomeTecnologiasSecaoTitulo Fonte2'>Tecnologias que eu Utilizo</h2>
             </div>
             <div>
-                <div>
-                    <h3>Front-End</h3>
-                    <div>
-                        {exibirTecnologias('front-end')}
-                    </div>
-                </div>
-                <div>
-                    <h3>Back-End</h3>
-                    <div>
-                        {exibirTecnologias('back-end')}
-                    </div>
-                </div>
-                <div>
-                    <h3>Outras</h3>
-                    <div>
-                        {exibirTecnologias('outro')}
-                    </div>
-                </div>
+                <TecnologiaAreaTipo tipo='Front-End' >{exibirTecnologias('front-end')}</TecnologiaAreaTipo>
+                <TecnologiaAreaTipo tipo='Back-End' >{exibirTecnologias('back-end')}</TecnologiaAreaTipo>
+                <TecnologiaAreaTipo tipo='Outras' >{exibirTecnologias('outro')}</TecnologiaAreaTipo>
             </div>
         </section>
     )
