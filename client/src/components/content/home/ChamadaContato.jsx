@@ -1,9 +1,11 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
+import './css/ChamadaContato.css'
+
 export default props=>
-<section>
-    <h2>Mande uma Mensagem</h2>
-    <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, officia.</h4>
-    <Button>Contate-me</Button>
+<section className='ChamadaContatoSection'>
+    <h2 className='ChamadaContatoTexto1'>Quer desenvolver um projeto comigo?</h2>
+    <h4 className='ChamadaContatoTexto2'>Me Mande uma mensagem e vamos trabalhar juntos!</h4>
+    <Button variant='warning' href='/contato' className='ChamadaContatoBotao'>Contato</Button>
 </section>
