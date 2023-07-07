@@ -12,6 +12,6 @@ export default props=>
   <Sobre/>
   <Habilidades/>
   <Tecnologias/>
-  <ChamadaContato/>
   <Formacao/>
+  <ChamadaContato/>
 </>

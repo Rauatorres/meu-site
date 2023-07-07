@@ -8,6 +8,7 @@ import './css/Habilidades.css'
 
 export default props=>
 <section className='HabilidadesSection'>
+    <div className='ImagemDeFundo'></div>
     <h1 className='HabilidadesTitulo Fonte2'>Minhas Habilidades</h1>
     <div className='HabilidadesArea'>
         <Habilidade icone={MdDevices()} texto='Desenvolvimento de interfaces responsivas com design elegante, inteligente e minimalista' />
@@ -16,4 +17,5 @@ export default props=>
         <Habilidade icone={<FontAwesomeIcon icon={faDatabase}/>} texto='Sistemas de banco de dados relacionais e não relacionais' />
         <Habilidade icone={<FontAwesomeIcon icon={faCodeBranch}/>} texto='Versionamento e gerenciamento de código fonte com git e github' />
     </div>
+
 </section>

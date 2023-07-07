@@ -25,9 +25,6 @@ form{
     top: -20vh;
     box-shadow: 2px 3px 4px 1px rgba(0, 0, 0, 0.1);
 }
-.FormLabel{
-    /* color: rgb(104, 23, 196); */
-}
 .FormRow{
     margin-top: 1rem;
     margin-bottom: 1.7rem;

@@ -4,10 +4,10 @@ import { Card } from 'react-bootstrap'
 
 
 export default props=>
-<Card>
-    <div>{props.icone}</div>
-    <h4>{props.titulo}</h4>
-    <div>
+<Card className='FormacaoCard'>
+    <div className='FormacaoCardIcone'>{props.icone}</div>
+    <Card.Title className='FormacaoCardTitulo'>{props.titulo}</Card.Title>
+    <Card.Body>
         {props.children}
-    </div>
+    </Card.Body>
 </Card>
