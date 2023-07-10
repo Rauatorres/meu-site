@@ -30,9 +30,9 @@ export default props=>{
     return (
         <section className='HomeTecnologiasSection'>
             <div>
-                <h2 className='HomeTecnologiasSecaoTitulo Fonte2'>Tecnologias que eu Utilizo</h2>
+                <h2 className='HomeTecnologiasSecaoTitulo Fonte2'>Tecnologias</h2>
             </div>
-            <div>
+            <div className='TecnologiasArea'>
                 <TecnologiaAreaTipo tipo='Front-End' >{exibirTecnologias('front-end')}</TecnologiaAreaTipo>
                 <TecnologiaAreaTipo tipo='Back-End' >{exibirTecnologias('back-end')}</TecnologiaAreaTipo>
                 <TecnologiaAreaTipo tipo='Outras' >{exibirTecnologias('outro')}</TecnologiaAreaTipo>

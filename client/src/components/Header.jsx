@@ -11,7 +11,7 @@ import Logo from './img/Logo.png'
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle'
 
 export default props =>
-  <Navbar expand='sm' className="Navbar">
+  <Navbar expand='sm' className="Navbar" variant='dark'>
     <Container>
       <Navbar.Brand>Logo</Navbar.Brand>
       <Navbar.Toggle aria-controls='navbar' className='MenuButton'/>

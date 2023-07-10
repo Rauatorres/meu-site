@@ -5,12 +5,13 @@ import './css/Sobre.css'
  
 export default props=>
 <section className='HomeSobreSecao'>
-    <h1 className='HomeSobreTitulo Fonte2'>Olá, Eu sou <strong>Rauã Torres</strong></h1>
+    <h1 className='HomeSobreTitulo Fonte2'>Olá, Meu Nome é Rauã Torres</h1>
+    <div className='MinhaFoto'></div>
     <p className='HomeSobreDescricao'>
-        Sou desenvolvedor web <strong className='HomeSobrePalavraFullstack'>fullstack</strong>.
+        Eu sou desenvolvedor web <strong className='HomeSobrePalavraFullstack'>fullstack</strong>
     </p>
-    <p className='HomeSobreDescricao'>
+    {/* <p className='HomeSobreDescricao'>
         Crio sites e sistemas web completos, belos e funcionais utilizando <strong className='HomeSobrePalavraJavascript'>JavaScript</strong> tanto no lado do cliente, quanto no servidor.
-    </p>
+    </p> */}
     <Button className='HomeSobreButtonProjetos' href='/projetos' target='_blank'>Conheça meus projetos</Button>
 </section>

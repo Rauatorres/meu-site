@@ -10,8 +10,8 @@ import ChamadaContato from './ChamadaContato'
 export default props=>
 <>
   <Sobre/>
-  <Habilidades/>
   <Tecnologias/>
+  <Habilidades/>
   <Formacao/>
   <ChamadaContato/>
 </>

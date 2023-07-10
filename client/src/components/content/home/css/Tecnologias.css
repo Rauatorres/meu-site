@@ -1,17 +1,24 @@
 .HomeTecnologiasSection{
     padding: 3rem 2rem;
-    background-color: rgb(246, 246, 246);
+    background-image: linear-gradient(#2F0559, black);
+    color: white;
 }
 
 .HomeTecnologiasSecaoTitulo{
     width: fit-content;
-    margin: 2rem auto;
+    margin: 4rem auto;
     font-size: 2.7rem;
+    text-align: center;
+}
+
+.TecnologiasArea{
+    margin: 10rem auto;
+    /* background-color: red; */
 }
 
 .TecnologiasTipoArea{
     /* background-color: red; */
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
 }
 .TecnologiasTipoTitulo{
     font-size: 2.2rem;
@@ -22,17 +29,20 @@
 .Tecnologia{
     /* background-color: gold; */
     width: fit-content;
-    margin: 3rem auto;
+    margin: 2.5rem auto;
     padding: 0.8rem 0.4rem;
 }
 .TecnologiaImg{
-    width: 40vw;
-    height: 40vw;
+    width: 20vw;
+    height: 20vw;
+    margin: auto;
+    display: block;
 }
 .TecnologiaNome{
     /* background-color: blue; */
     width: fit-content;
     margin: 1rem auto;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
+    letter-spacing: 0.2rem;
 }
