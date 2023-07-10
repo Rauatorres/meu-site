@@ -8,12 +8,12 @@ import './css/Tecnologias.css'
 export default props=>{
     const [listaTecnologias, setListaTecnologias] = useState([])
 
-    async function getListaTecnologias(){
-        let getLista = await axios.get('http://localhost:3001/api/tecnologias')
-        setListaTecnologias(getLista.data)
-    }
-
+    
     useEffect(()=>{
+        async function getListaTecnologias(){
+            let getLista = await axios.get('http://localhost:3001/api/tecnologias')
+            setListaTecnologias(getLista.data)
+        }
         getListaTecnologias()
     }, [])
 

@@ -11,7 +11,6 @@ const DAO = class DAO{
     async executarMetodo(metodo){
         await this.client.connect()
         await metodo()
-        await this.client.close()
     }
 
     async mostrarTodos(){
