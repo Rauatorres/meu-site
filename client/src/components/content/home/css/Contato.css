@@ -1,0 +1,102 @@
+.ContatoSecao{
+    background-image: linear-gradient(#280A45, #7918DA);
+    color: white;
+    padding: 0.1px;
+}
+
+.ContatoTitulo{
+    font-size: 2rem;
+}
+.ContatoTitulo, .ContatoOpcoesTitulo{
+    width: fit-content;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.ContatoFormulario{
+    width: 80vw;
+    margin: 2rem auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+}
+.FormRow{
+    margin-bottom: 1.5rem;
+}
+.MsgRow{
+    margin: 2rem 0;
+    margin-top: 2.5 rem;
+}
+.FormInput{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    color: white;
+}
+.FormInput:active{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.FormInput:focus{
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    border-color: white;
+    color: white;
+}
+.FormInput::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+.Submit{
+    width: 100%;
+    background-color: #881BF4;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 1.7rem;
+}
+
+.ContatoOpcoesIconeGrandeArea{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 5rem;
+    padding: 1.5rem 2.3rem;
+    border-radius: 20rem;
+    display: flex;
+    align-items: center;
+}
+.ContatoOpcoesIconeGrande{
+    font-size: 3rem;
+}
+.ContatoOpcoes{
+    margin: 5rem 0;
+}
+.ContatoOpcao{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 87vw;
+    font-size: 0.9rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+.ContatoOpcao:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.ContatoOpcao:hover .ContatoOpcaoCopiar{
+    display: inline;
+}
+.ContatoOpcaoIcone{
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
+}
+.ContatoOpcaoTexto{
+    margin: 0 0.3rem;
+}
+.ContatoOpcaoCopiar{
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.5);
+    display: none;
+}
+.ContatoOpcaoCopiar:hover{
+    color: white;
+}
+

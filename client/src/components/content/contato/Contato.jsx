@@ -1,7 +1,7 @@
 import React from 'react'
 import AreaFormulario from './AreaFormulario'
 
-import './css/Formulario.css'
+// import './css/Formulario.css'
 
 export default props=>
 <>

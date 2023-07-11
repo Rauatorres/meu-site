@@ -7,6 +7,7 @@ import Tecnologias from './Tecnologias'
 import Formacao from './Formacao'
 import ChamadaContato from './ChamadaContato'
 import Projetos from './Projetos'
+import Contato from './Contato'
 
 export default props=>
 <>
@@ -14,6 +15,7 @@ export default props=>
   <Tecnologias/>
   {/* <Habilidades/> */}
   <Projetos/>
-  <Formacao/>
-  <ChamadaContato/>
+  {/* <Formacao/>
+  <ChamadaContato/> */}
+  <Contato/>
 </>
