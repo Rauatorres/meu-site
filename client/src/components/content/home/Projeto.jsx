@@ -9,11 +9,18 @@ export default props=>{
         <div className='HomeProjeto'>
             <div className='HomeProjetoImgArea'>
                 <div className='HomeProjetoImgMouse'>
-                    <Button className='HomeProjetoBotaoVer' variant='outline-light'>ver projeto <FontAwesomeIcon icon={faAngleRight} /></Button>
+                    <div className='HomeProjetoAreaTitulo'>
+                        <h4 className='HomeProjetoTitulo'>{props.titulo}</h4>
+                        <Button className='HomeProjetoBotaoVer' variant='outline-light'>ver<FontAwesomeIcon icon={faAngleRight} /></Button>
+                    </div>
+                    <div className='HomeProjetoDescArea'>
+                        <p className='HomeProjetoDesc'>
+                            {props.children}
+                        </p>
+                    </div>
                 </div>
                 <img className='HomeProjetoImg' src={imgPath}/>
             </div>
-            <h4 className='HomeProjetoTitulo'>{props.titulo}</h4>
         </div>
     )
 }

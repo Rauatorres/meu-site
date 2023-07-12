@@ -1,5 +1,5 @@
 .ProjetosSection{
-    background-image: linear-gradient(black, #17022C);
+    background-image: linear-gradient(black, #130223, #17022C, #280A45);
     color: white;
 }
 
@@ -16,31 +16,67 @@
 }
 .HomeProjetoImgMouse{
     width: 80vw;
-    height: 40vw;
+    height: 45vw;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column-reverse;
+    /* justify-content: center;
+    align-items: center; */
 }
 .HomeProjetoBotaoVer{
     border: 2px solid white;
-    display: none;
+    height: 2rem;
+    opacity: 0;
+    padding: 0 1rem;
+    transition: opacity 1s;
 }
 .HomeProjetoImgMouse:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
 }
 .HomeProjetoImgMouse:hover .HomeProjetoBotaoVer{
-    display: block;
+    opacity: 1;
+}
+.HomeProjetoImgMouse:hover .HomeProjetoDescArea{
+    height: 70%;
+}
+.HomeProjetoImgMouse:hover .HomeProjetoDesc{
+    opacity: 1;
 }
 .HomeProjetoImg{
     width: 80vw;
-    height: 40vw;
+    height: 45vw;
+}
+.HomeProjetoAreaTitulo{
+    background-color: rgba(0, 0, 0, 0.6);
+    /* position: relative; */
+    height: 30%;
+    padding: 0 1rem;
+    /* top: -2rem; */
+    /* bottom: -1rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .HomeProjetoTitulo{
     width: fit-content;
-    margin: 1.5rem auto;
-    font-weight: 300;
+    /* margin: 1.5rem auto; */
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.HomeProjetoDescArea{
+    word-wrap: break-word;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 0px;
+    transition: height 0.5s;
+    transition-timing-function: ease-out;
+}
+.HomeProjetoDesc{
+    padding: 1rem;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.7s;
 }
 
 .HomeProjetosBotao{

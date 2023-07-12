@@ -33,9 +33,9 @@ export default props=>{
                 <h2 className='HomeTecnologiasSecaoTitulo Fonte2'>Tecnologias</h2>
             </div>
             <div className='TecnologiasArea'>
-                <TecnologiaAreaTipo tipo='Front-End' >{exibirTecnologias('front-end')}</TecnologiaAreaTipo>
-                <TecnologiaAreaTipo tipo='Back-End' >{exibirTecnologias('back-end')}</TecnologiaAreaTipo>
-                <TecnologiaAreaTipo tipo='Outras' >{exibirTecnologias('outro')}</TecnologiaAreaTipo>
+                {exibirTecnologias('front-end')}
+                {exibirTecnologias('back-end')}
+                {exibirTecnologias('outro')}
             </div>
         </section>
     )
