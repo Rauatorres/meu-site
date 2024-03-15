@@ -2,5 +2,5 @@ import React from 'react'
 
 export default props=>
 <div>
-    Apresentação
+    {props.children}
 </div>

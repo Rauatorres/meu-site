@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Apresentacao from './Apresentacao'
+import Navbar from '../geral/Navbar'
+import Apresentacao from './conteudo/Apresentacao'
 
 export default props=>
 <header>
