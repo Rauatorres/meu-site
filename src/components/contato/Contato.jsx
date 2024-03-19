@@ -5,7 +5,7 @@ import Titulo from './conteudo/Titulo'
 import AreaContato from './conteudo/AreaContato'
 
 export default props=>
-<section>
+<section id='SecaoContato'>
     <Navbar/>
     <Titulo/>
     <AreaContato/>

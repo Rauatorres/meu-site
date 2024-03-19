@@ -6,7 +6,7 @@ import AreaProjetos from './conteudo/AreaProjetos'
 import AreaBotoes from './conteudo/AreaBotoes'
 
 export default props=>
-<section>
+<section id='SecaoProjetos'>
     <Navbar/>
     <Titulo/>
     <AreaProjetos/>

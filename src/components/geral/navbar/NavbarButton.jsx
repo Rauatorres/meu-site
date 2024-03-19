@@ -1,6 +1,13 @@
 import React from 'react'
 
-export default props=>
-<div>
-    NavButton
-</div>
+export default props=>{
+    return (
+        <span onClick={()=>{
+                document.querySelector(`#${props.elemento}`).
+                scrollIntoView({behavior: 'smooth'})
+            }
+        }>
+            {props.nome}
+        </span>
+    )
+}

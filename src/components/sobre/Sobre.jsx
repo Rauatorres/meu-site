@@ -5,7 +5,7 @@ import MinhaImagem from './conteudo/MinhaImagem'
 import Conteudo from './conteudo/Conteudo'
 
 export default props=>
-<section>
+<section id='SecaoSobre'>
     <Navbar/>
     <MinhaImagem/>
     <Conteudo/>

@@ -4,7 +4,7 @@ import Titulo from './conteudo/Titulo'
 import AreaTecnologias from './conteudo/AreaTecnologias'
 
 export default props=>
-<section>
+<section id='SecaoTecnologias'>
     <Navbar/>
     <Titulo/>
     <AreaTecnologias/>
