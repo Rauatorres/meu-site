@@ -6,5 +6,5 @@ export default props=>
 <div>
     <div>{props.icone}</div>
     <div>{props.texto}</div>
-    <div><ContentCopyIcon/></div>
+    <div onClick={()=>{navigator.clipboard.writeText(props.texto)}}><ContentCopyIcon/></div>
 </div>

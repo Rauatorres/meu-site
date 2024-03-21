@@ -13,5 +13,5 @@ export default props=>
             Programo em Javascript desde 2019. 
         </h2>
     </div>
-    <div><a href="#">baixar meu currículo (<span>PDF</span>) <span><ArrowOutwardIcon/></span></a></div>
+    <div><a href="files/curriculo.txt" download="currículo.txt">baixar meu currículo (<span>PDF</span>) <span><ArrowOutwardIcon/></span></a></div>
 </div>
