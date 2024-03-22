@@ -1,14 +1,14 @@
 import React from 'react'
 
+import DevicesIcon from '@mui/icons-material/Devices';
+import StorageIcon from '@mui/icons-material/Storage';
+import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
+
 import Categoria from './components/Categoria'
 
 import listaTecnologias from './listaTecnologias';
 
-import exibirTecnologias from './funcoes/exibirTecnologias';
-
-import DevicesIcon from '@mui/icons-material/Devices';
-import StorageIcon from '@mui/icons-material/Storage';
-import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
+import exibirTecnologias from './script/exibirTecnologias'
 
 export default props=>{
     const {frontEnd, backEnd, outro} = listaTecnologias

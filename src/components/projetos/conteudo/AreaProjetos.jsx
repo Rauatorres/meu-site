@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 
 import AreaSelecaoProjetos from './area_projetos/AreaSelecaoProjetos'
 import Projeto from './area_projetos/Projeto'
-import TecnologiaUsada from './area_projetos/TecnologiaUsada'
+import AreaBotoes from './AreaBotoes'
 
 import listaProjetos from './listaProjetos'
 
@@ -23,11 +23,12 @@ export default props=>{
                 titulo={projetoSelecionado.titulo}
                 descricao={projetoSelecionado.descricao}
             >
-                {/* <TecnologiaUsada nome="tecnologia"/>
-                <TecnologiaUsada nome="tecnologia"/>
-                <TecnologiaUsada nome="tecnologia"/> */}
-                {exibirTecnologiasProjeto(projetoSelecionado)}
+            {exibirTecnologiasProjeto(projetoSelecionado)}
             </Projeto>
+            <AreaBotoes 
+                linkVerProjeto={projetoSelecionado.linkVisualizacao} 
+                linkAcessarProjeto={projetoSelecionado.linkProjeto}
+            />
         </div>
     )
 }
