@@ -1,0 +1,16 @@
+.NavPreto{
+    color: rgba(255, 255, 255, 0.8);
+}
+.NavBranco{
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.NavbarList{
+    display: flex;
+    list-style-type: none;
+}
+.NavbarItem{
+    cursor: pointer;
+    /* color: red; */
+
+}

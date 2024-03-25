@@ -7,6 +7,8 @@ import Projetos from './components/projetos/Projetos'
 import Contato from './components/contato/Contato'
 import Footer from './components/footer/Footer'
 
+import './App.css'
+
 export default props=>
 <>
   <Header/>

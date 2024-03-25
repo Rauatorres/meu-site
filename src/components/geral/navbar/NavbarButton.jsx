@@ -2,7 +2,7 @@ import React from 'react'
 
 export default props=>{
     return (
-        <span onClick={()=>{
+        <span className='NavbarItem' onClick={()=>{
                 document.querySelector(`#${props.elemento}`).
                 scrollIntoView({behavior: 'smooth'})
             }
