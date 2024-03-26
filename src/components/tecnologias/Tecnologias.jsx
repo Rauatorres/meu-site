@@ -7,7 +7,7 @@ import './css/Tecnologias.css'
 
 export default props=>
 <section id='SecaoTecnologias' className='TecnologiasSecao'>
-    <Navbar cor="Preto"/>
+    <Navbar cor="Preto" posicao="Esquerda"/>
     <Titulo/>
     <AreaTecnologias/>
 </section>

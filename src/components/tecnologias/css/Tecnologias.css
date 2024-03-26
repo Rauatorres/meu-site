@@ -1,4 +1,6 @@
 .TecnologiasSecao{
     background-image: linear-gradient(#0F0F0F, #000000);
     color: white;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }

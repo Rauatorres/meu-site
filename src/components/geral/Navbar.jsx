@@ -6,7 +6,7 @@ import NavbarButton from './navbar/NavbarButton'
 import './css/Navbar.css'
 
 export default props=>
-<nav className={`Navbar Nav${props.cor}`}>
+<nav className={`Navbar Nav${props.cor} Nav${props.posicao}`}>
     <NavbarList/>
     <NavbarButton/>
 </nav>

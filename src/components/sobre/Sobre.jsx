@@ -8,7 +8,7 @@ import './css/Sobre.css'
 
 export default props=>
 <section id='SecaoSobre' className='SobreSecao'>
-    <Navbar cor="Branco"/>
+    <Navbar cor="Branco" posicao="Direita"/>
     <MinhaImagem/>
     <Conteudo/>
 </section>

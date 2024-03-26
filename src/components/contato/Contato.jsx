@@ -8,7 +8,7 @@ import './css/Contato.css'
 
 export default props=>
 <section id='SecaoContato' className='ContatoSecao'>
-    <Navbar cor='Branco'/>
+    <Navbar cor='Branco' posicao='Esquerda'/>
     <Titulo/>
     <AreaContato/>
 </section>

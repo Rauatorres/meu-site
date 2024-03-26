@@ -8,7 +8,7 @@ import './css/Projetos.css'
 
 export default props=>
 <section id='SecaoProjetos' className='ProjetosSecao'>
-    <Navbar/>
+    <Navbar cor='Preto' posicao="Direita"/>
     <Titulo/>
     <AreaProjetos/>
 </section>

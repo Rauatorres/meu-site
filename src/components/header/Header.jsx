@@ -6,6 +6,6 @@ import './css/Header.css'
 
 export default props=>
 <header className='Header'>
-    <Navbar cor="Preto"/>
+    <Navbar cor="Preto" posicao="Esquerda"/>
     <Apresentacao/>
 </header>

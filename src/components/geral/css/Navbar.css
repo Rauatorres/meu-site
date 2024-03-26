@@ -1,3 +1,16 @@
+.Navbar{
+    font-size: 1.4vw;
+    margin: 3vw 0;
+}
+
+.NavEsquerda{
+    /* background-color: red; */
+    grid-column: 2/span 5;
+}
+.NavDireita{
+    grid-column: 7/span 5;
+}
+
 .NavPreto{
     color: rgba(255, 255, 255, 0.8);
 }
@@ -7,10 +20,17 @@
 
 .NavbarList{
     display: flex;
+    justify-content: space-around;
     list-style-type: none;
 }
 .NavbarItem{
     cursor: pointer;
     /* color: red; */
+}
 
+.NavPreto .NavbarItem:hover{
+    color: #FFFFFF;
+}
+.NavBranco .NavbarItem:hover{
+    color: #000000;
 }

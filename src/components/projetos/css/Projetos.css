@@ -1,4 +1,6 @@
 .ProjetosSecao{
     background-image: linear-gradient(#000000, #0F0F0F);
     color: white;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
