@@ -3,3 +3,60 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+
+.MinhaImagemSobre{
+    background-image: url('http://localhost:3000/img/MinhaImagem2.jpg');
+    background-size: 100% 100%;
+    grid-column: 1/ span 5;
+    grid-row: 1/span 10;
+    height: 70vw;
+}
+
+.SobreConteudoBox{
+    grid-column: 7/span 5;
+    grid-row: 5;
+}
+.SobreIconeBox{
+    /* background-color: red; */
+    width: fit-content;
+    margin: auto;
+}
+.SobreIcone{
+    font-size: 12vw !important;
+}
+.SobreTextoBox{
+    margin-top: 50px;
+}
+.SobreTexto{
+    font-size: 3vw;
+    text-align: center;
+}
+.SobreBotaoCurriculo{
+    /* background-color: red; */
+    color: black;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.2vw;
+    margin-top: 100px;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 17px;
+    /* text-decoration: none; */
+    text-decoration-color: transparent;
+}
+.SobreBotaoIconeBox{
+    margin-left: 1vw;
+}
+.SobreBotaoIcone{
+    font-size: 2vw !important;
+}
+.SobreBotaoCurriculoTextoPDF{
+    color: #F03737;
+}
+
+.SobreBotaoCurriculo:hover{
+    transition: 0.3s;
+    /* text-decoration: underline; */
+    text-decoration-color: black;
+}
