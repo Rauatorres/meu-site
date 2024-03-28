@@ -7,4 +7,31 @@
 
 .ApresentacaoBox{
     grid-column: 1/span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.MinhaImagemApresentacao{
+    background-image: url('http://localhost:3000/img/MinhaImagem1.jpg');
+    background-size: 15vw;
+    width: 15vw;
+    height: 15vw;
+    margin: auto;
+    grid-column: 6/span 2;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    border: solid 3px #921818;
+    border-radius: 10vw;
+}
+
+.TextoApresentacao{
+    grid-column: 2/span 10;
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 270px;
+}
+
+.ApresentacaoTextoVermelho{
+    color: #F03737;
 }
