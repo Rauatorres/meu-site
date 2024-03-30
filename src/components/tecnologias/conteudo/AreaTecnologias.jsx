@@ -14,14 +14,14 @@ export default props=>{
     const {frontEnd, backEnd, outro} = listaTecnologias
 
     return (
-        <div>
-            <Categoria titulo="Front-End" icone={<DevicesIcon/>}>
+        <div className='AreaTecnologiasCategorias'>
+            <Categoria titulo="Front-End" icone={<DevicesIcon className='TecnologiasCategoriaIcone'/>}>
                 {exibirTecnologias(frontEnd)}
             </Categoria>
-            <Categoria titulo="Back-End" icone={<StorageIcon/>}>
+            <Categoria titulo="Back-End" icone={<StorageIcon className='TecnologiasCategoriaIcone'/>}>
                 {exibirTecnologias(backEnd)}
             </Categoria>
-            <Categoria titulo="Outro" icone={<MiscellaneousServicesIcon/>}>
+            <Categoria titulo="Outro" icone={<MiscellaneousServicesIcon className='TecnologiasCategoriaIcone'/>}>
                 {exibirTecnologias(outro)}
             </Categoria>
         </div>
