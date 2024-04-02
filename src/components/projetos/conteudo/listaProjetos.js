@@ -31,6 +31,30 @@ const listaProjetos = [
         ],
         linkVisualizacao: "#",
         linkProjeto: "#",
+    },
+    {
+        titulo: "projeto4",
+        imagem: "projeto4_img",
+        descricao: "sadljsalkddçsajdlkaskldasjçldkjçasl",
+        tecnologias: [
+            'tecnologia',
+            'tecnologia',
+            'tecnologia'
+        ],
+        linkVisualizacao: "#",
+        linkProjeto: "#",
+    },
+    {
+        titulo: "projeto5",
+        imagem: "projeto5_img",
+        descricao: "sadljsalkddçsajdlkaskldasjçldkjçasl",
+        tecnologias: [
+            'tecnologia',
+            'tecnologia',
+            'tecnologia'
+        ],
+        linkVisualizacao: "#",
+        linkProjeto: "#",
     }
 ]
 

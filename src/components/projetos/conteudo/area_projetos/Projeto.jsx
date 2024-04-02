@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default props=>
-<div>
-    <div>{props.img}</div>
-    <div>{props.titulo}</div>
-    <div>{props.descricao}</div>
-    <div>{props.children}</div>
+<div className='Projeto'>
+    <div className='ProjetoImagem'>{props.img}</div>
+    <div className='ProjetoTitulo'>{props.titulo}</div>
+    <div className='ProjetoDescricao'>{props.descricao}</div>
+    <div className='ProjetoTecnologias'>{props.children}</div>
 </div>

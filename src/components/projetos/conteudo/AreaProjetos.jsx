@@ -14,7 +14,7 @@ export default props=>{
     const projetoSelecionado = listaProjetos[projetoSelecionadoIndex]
 
     return (
-        <div>
+        <div className='AreaProjetos'>
             <AreaSelecaoProjetos>
                 {exibirBotoesSelecaoProjeto(listaProjetos, setProjetoSelecionadoIndex)}
             </AreaSelecaoProjetos>

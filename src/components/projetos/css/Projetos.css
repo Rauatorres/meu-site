@@ -4,3 +4,96 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+
+.ProjetosTituloBox{
+    grid-column: 6/span 6;
+    text-align: end;
+    margin: 200px 0;
+}
+.ProjetosTitulo{
+    font-size: 6vw;
+    margin-bottom: 40px;
+}
+.ProjetosSubtitulo{
+    font-size: 3.5vw;
+}
+
+.AreaProjetos{
+    grid-column: 2/span 10;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.AreaSelecaoProjetos{
+    grid-column: 1/span 3;
+    /* background-color: red; */
+    height: 50vw;
+    overflow-y: scroll;
+}
+.BotaoSelecaoProjeto{
+    background-color: grey;
+    width: 65%;
+    height: 17%;
+    margin: 40px auto;
+    cursor: pointer;
+}
+.Projeto{
+    grid-column: 6/span 5;
+    /* background-color: gold; */
+}
+.Projeto *{
+    margin: auto;
+}
+.ProjetoImagem{
+    background-color: grey;
+    width: 85%;
+    height: 35%;
+}
+.ProjetoTitulo{
+    /* background-color: red; */
+    width: fit-content;
+    margin: 30px auto;
+    font-size: 2.3vw;
+}
+.ProjetoDescricao{
+    /* background-color: blue; */
+    width: 85%;
+    height: 30%;
+    margin-bottom: 30px;
+    font-size: 1.5vw;
+    text-align: center;
+}
+.ProjetoTecnologias{
+    /* background-color: green; */
+    display: flex;
+}
+.ProjetoTecnologia{
+    background-color: white;
+    color: black;
+    font-size: 1.3vw;
+    padding: 0.8vw 2vw;
+    border-radius: 2vw;
+}
+
+.AreaBotoes{
+    grid-column: 3/span 6;
+    margin: 200px 0;
+}
+.ProjetoBotao{
+    /* background-color: red; */
+    display: block;
+    margin: auto;
+    margin-bottom: 120px;
+    text-align: center;
+    text-decoration: none;
+    padding: 2vw;
+    font-size: 3vw;
+    border-radius: 2vw;
+    color: white;
+}
+.BotaoVerProjeto{
+    border: 3px solid white;
+}
+.BotaoAcessarProjeto{
+    background-color: #921818;
+}
