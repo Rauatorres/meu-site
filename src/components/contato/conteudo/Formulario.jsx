@@ -24,20 +24,12 @@ export default props=>{
 
     return (
         <form className='ContatoFormulario' onSubmit={submit}>
-            <label htmlFor="">
-                <input type="text" name='nome' onChange={handleStateChange}/>
-            </label>
-            <div>
-                <label htmlFor="">
-                    <input type="tel" name="tel" id="" onChange={handleStateChange}/>
-                </label>
-                <label htmlFor="">
-                    <input type="email" name="email" id="" onChange={handleStateChange}/>
-                </label>
+                <input className='ContatoFormularioInputNome' id='nome' type="text" name='nome' onChange={handleStateChange} placeholder='Nome'/>
+            <div className='ContatoFormularioEmailTelBox'>
+                    <input className='ContatoFormularioInputTel' id="tel" type="tel" name="tel" onChange={handleStateChange} placeholder='Telefone'/>
+                    <input className='ContatoFormularioInputEmail' type="email" name="email" id="email" onChange={handleStateChange} placeholder='Email'/>
             </div>
-            <label htmlFor="">
-                <textarea name="msg" id="" cols="30" rows="10"onChange={handleStateChange}></textarea>
-            </label>
+                <textarea className='ContatoFormularioInputMsg' name="msg" id="msg" cols="30" rows="10"onChange={handleStateChange} placeholder='Digite...'></textarea>
             <input className='BotaoEnviarContato' type="submit" value="Enviar" />
         </form>
     )
