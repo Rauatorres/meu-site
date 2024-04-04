@@ -4,7 +4,7 @@ import Formulario from './Formulario'
 import AreaInformacoes from './AreaInformacoes'
 
 export default props=>
-<div>
+<div className='AreaContato'>
     <Formulario/>
     <AreaInformacoes/>
 </div>

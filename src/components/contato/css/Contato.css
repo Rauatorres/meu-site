@@ -3,3 +3,45 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+
+.ContatoTituloBox{
+    grid-column: 2/span 6;
+    margin: 200px 0;
+}
+.ContatoTitulo{
+    font-size: 6vw;
+    margin-bottom: 40px;
+}
+.ContatoSubtitulo{
+    font-size: 3.5vw;
+}
+
+.AreaContato{
+    grid-column: 2/span 10;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-bottom: 200px;
+}
+
+.ContatoFormulario{
+    /* background-color: red; */
+    grid-column: 1/span 4;
+}
+
+.ContatoAreaInformacoes{
+    /* background-color: blue; */
+    grid-column: 7/span 4;
+}
+.ContatoInformacoesTexto{
+    background-color: red;
+    text-align: center;
+}
+.ContatoInformacoesIconeBox{
+    background-color: blue;
+    width: fit-content;
+    margin: auto;
+}
+.ContatoInformacao{
+    display: flex;
+    justify-content: space-between;
+}

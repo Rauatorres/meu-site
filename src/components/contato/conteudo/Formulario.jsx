@@ -23,7 +23,7 @@ export default props=>{
     }
 
     return (
-        <form onSubmit={submit}>
+        <form className='ContatoFormulario' onSubmit={submit}>
             <label htmlFor="">
                 <input type="text" name='nome' onChange={handleStateChange}/>
             </label>
@@ -38,7 +38,7 @@ export default props=>{
             <label htmlFor="">
                 <textarea name="msg" id="" cols="30" rows="10"onChange={handleStateChange}></textarea>
             </label>
-            <input type="submit" value="Enviar" />
+            <input className='BotaoEnviarContato' type="submit" value="Enviar" />
         </form>
     )
 }

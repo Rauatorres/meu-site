@@ -5,11 +5,13 @@ import Informacao from './components/Informacao'
 import MessageIcon from '@mui/icons-material/Message';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import CallIcon from '@mui/icons-material/Call';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default props=>
-<div>
-    <div>Texto</div>
-    <div><MessageIcon/></div>
+<div className='ContatoAreaInformacoes'>
+    <h3 className='ContatoInformacoesTexto'>Ou se preferir, entre em contato...</h3>
+    <div className='ContatoInformacoesIconeBox'><MessageIcon className='ContatoInformacoesIcone'/></div>
     <div>
         <Informacao
             icone={<AlternateEmailIcon/>}
@@ -20,11 +22,11 @@ export default props=>
             texto="74 99944 1480"
         />
         <Informacao
-            icone="linkedin"
+            icone={<FontAwesomeIcon icon={faLinkedinIn} />}
             texto="www.linkedin.com/in/rauatorres"
         />
         <Informacao
-            icone="github"
+            icone={<FontAwesomeIcon icon={faGithub} />}
             texto="www.github.com/Rauatorres"
         />
     </div>
