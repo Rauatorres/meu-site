@@ -6,6 +6,7 @@ import MessageIcon from '@mui/icons-material/Message';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import CallIcon from '@mui/icons-material/Call';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default props=>
@@ -14,11 +15,11 @@ export default props=>
     <div className='ContatoInformacoesIconeBox'><MessageIcon className='ContatoInformacoesIcone'/></div>
     <div>
         <Informacao
-            icone={<AlternateEmailIcon/>}
+            icone={<FontAwesomeIcon icon={faEnvelope}/>}
             texto="rauatorres@gmail.com"
         />
         <Informacao
-            icone={<CallIcon/>}
+            icone={<FontAwesomeIcon icon={faPhone}/>}
             texto="74 99944 1480"
         />
         <Informacao
