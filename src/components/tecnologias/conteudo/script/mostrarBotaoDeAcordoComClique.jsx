@@ -7,7 +7,6 @@ export default (areaTecnologiaTamanhoReduzido, quantidadeTecnologiasMaiorQue3, a
     if(quantidadeTecnologiasMaiorQue3){
         if (areaTecnologiasStyle == areaTecnologiaTamanhoReduzido){
             return (
-                // <ArrowDropDownIcon className='TecnologiasBotaoMostrarMaisIcone'/>
                 <IoMdArrowDropdown className='TecnologiasBotaoMostrarMaisIcone'/>
             )
         }else{

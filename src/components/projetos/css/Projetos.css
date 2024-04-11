@@ -30,12 +30,21 @@
     height: 50vw;
     overflow-y: scroll;
 }
+.AreaSelecaoProjetos::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, 0);
+    width: 0.8vw;
+}
+.AreaSelecaoProjetos::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 2vw;
+}
 .BotaoSelecaoProjeto{
     background-color: grey;
-    width: 65%;
-    height: 17%;
+    /* width: 65%; */
+    /* height: 17%; */
     margin: 40px auto;
     cursor: pointer;
+    transition: width 0.5s, height 0.5s;
 }
 .Projeto{
     grid-column: 6/span 5;
@@ -48,12 +57,14 @@
     background-color: grey;
     width: 85%;
     height: 35%;
+    transition: background-color 1s;
 }
 .ProjetoTitulo{
     /* background-color: red; */
     width: fit-content;
     margin: 30px auto;
     font-size: 2.3vw;
+    transition: color 1s;
 }
 .ProjetoDescricao{
     /* background-color: blue; */
@@ -62,17 +73,25 @@
     margin-bottom: 30px;
     font-size: 1.5vw;
     text-align: center;
+    transition: color 1s;
 }
 .ProjetoTecnologias{
     /* background-color: green; */
     display: flex;
 }
-.ProjetoTecnologia{
+.FadeOut *{
     background-color: white;
     color: black;
+}
+.FadeIn *{
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+}
+.ProjetoTecnologia{
     font-size: 1.3vw;
     padding: 0.8vw 2vw;
     border-radius: 2vw;
+    transition: background-color 1s, color 1s;
 }
 
 .AreaBotoes{
