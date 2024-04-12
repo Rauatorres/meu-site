@@ -116,3 +116,12 @@
 .BotaoAcessarProjeto{
     background-color: #921818;
 }
+.BotaoVerProjeto:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.1s;
+}
+.BotaoAcessarProjeto:hover{
+    background-color: #c82222;
+    transition-duration: 0.1s;
+}
