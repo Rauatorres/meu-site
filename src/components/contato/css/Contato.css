@@ -149,3 +149,15 @@
 .ContatoInformacaoBotaoCopiarBox{
     cursor: pointer;
 }
+.ContatoInformacaoBotaoCopiar:hover{
+    color: rgb(82, 82, 82);
+}
+.MsgCopiado{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    font-size: 0.9vw;
+    padding: 0.5vw 1vw;
+    border-radius: 0.5vw;
+    position: absolute;
+    margin-left: -1.45vw;
+}
