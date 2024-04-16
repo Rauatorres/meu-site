@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { MdContentCopy } from "react-icons/md";
 
 export default props=>{
     const [msgCopiadoDisplay, setMsgCopiadoDisplay] = useState('none')
@@ -15,7 +16,7 @@ export default props=>{
                 onClick={()=>{navigator.clipboard.writeText(props.texto); setMsgCopiadoDisplay('block')}}
                 onMouseLeave={()=>{setMsgCopiadoDisplay('none')}}
             >
-                <ContentCopyIcon className='ContatoInformacaoBotaoCopiar'/>
+                <MdContentCopy className='ContatoInformacaoBotaoCopiar'/>
                 <div className='MsgCopiado' style={{display: msgCopiadoDisplay}}>Copiado!</div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { FaReact } from "react-icons/fa"
+import { RiExternalLinkLine } from "react-icons/ri";
 
 import './css/Footer.css'
 
@@ -16,6 +17,6 @@ export default props=>
     </div>
     <div className='FooterColuna FooterColunaRepositorio'>
         <div className='FooterTitulo'>Repositório do site</div>
-        <a className='FooterConteudo FooterLinkRepositorio' target='__blank' href='https://github.com/Rauatorres/meu-site'>https://github.com/Rauatorres/meu-site</a>
+        <a className='FooterConteudo FooterLinkRepositorio' target='__blank' href='https://github.com/Rauatorres/meu-site'>https://github.com/Rauatorres/meu-site <RiExternalLinkLine className='FooterLinkRepositorioIcone'/></a>
     </div>
 </footer>

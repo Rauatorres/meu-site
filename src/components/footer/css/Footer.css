@@ -41,3 +41,7 @@ footer{
 .FooterLinkRepositorio:hover{
     text-decoration: underline;
 }
+.FooterLinkRepositorioIcone{
+    font-size: 1vw !important;
+    margin-left: 0.5vw;
+}
