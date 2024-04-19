@@ -1,6 +1,7 @@
 .Navbar{
     font-size: 1.4vw;
     margin: 3vw 0;
+    /* background-color: red; */
 }
 
 .NavEsquerda{
@@ -33,4 +34,36 @@
 }
 .NavBranco .NavbarItem:hover{
     color: #000000;
+}
+
+.NavbarBotaoMenuBox{
+    /* margin-top: 10vw; */
+}
+.NavbarBotaoMenu{
+    font-size: 7vw;
+    margin-top: 2vw;
+}
+.NavbarListAberta{
+    font-size: 4vw;
+    list-style-type: none;
+    /* background-color: red; */
+    overflow: hidden;
+    transition: height 1s;
+}
+.NavbarListAberta li{
+    /* background-color: red; */
+    margin: 2.5vw 0;
+    width: fit-content;
+}
+.BotaoFecharMenu{
+    font-size: 8vw !important;
+    margin-left: -1.5vw;
+}
+
+@media (max-width: 760px) {
+    .Navbar{
+        /* background-color: red; */
+        height: 40vw;
+    }
+
 }

@@ -6,24 +6,31 @@ import NavbarListAberta from './NavbarListAberta';
 
 export default props=>{
     const [estadoMenu, setEstadoMenu] = useState('fechado')
+    const [alturaDaNav, setAlturaDaNav] = useState('0')
 
     function mudarEstadoMenu(){
         if (estadoMenu == 'fechado'){
             setEstadoMenu('aberto')
+            setTimeout(()=>{
+                setAlturaDaNav('40vw')
+            }, 1)
         }else{
-            setEstadoMenu('fechado')
+            setAlturaDaNav('0')
+            setTimeout(()=>{
+                setEstadoMenu('fechado')
+            }, 1000)
         }
     }
 
     function conteudoMenu(){
         if (estadoMenu == 'fechado'){
             return (
-                <div onClick={mudarEstadoMenu}>
-                    <TiThMenu />
+                <div className='NavbarBotaoMenuBox' onClick={()=>{mudarEstadoMenu();}}>
+                    <TiThMenu className='NavbarBotaoMenu'/>
                 </div>
             )
         }else{
-            return(<NavbarListAberta botaoFecharMenu={<div onClick={mudarEstadoMenu}><IoMdArrowDropup /></div>}/>)
+            return(<NavbarListAberta altura={alturaDaNav} botaoFecharMenu={<div onClick={mudarEstadoMenu}><IoMdArrowDropup className='BotaoFecharMenu'/></div>}/>)
         }
     }
 

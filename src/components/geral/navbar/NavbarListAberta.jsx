@@ -3,7 +3,7 @@ import React from 'react'
 import NavbarButton from './NavbarButton'
 
 export default props=>
-<ul className='NavbarListAberta'>
+<ul className='NavbarListAberta' style={{height: props.altura}}>
     <li>
         <NavbarButton nome="Sobre" elemento="SecaoSobre" />
     </li>
