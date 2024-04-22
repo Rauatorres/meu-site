@@ -50,3 +50,12 @@
         font-size: 7vw;
     }
 }
+
+@media (max-width: 425px) {
+    .MinhaImagemApresentacao{
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    .TextoApresentacao{
+    }
+}
