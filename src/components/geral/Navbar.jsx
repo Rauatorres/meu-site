@@ -12,11 +12,9 @@ export default props=>{
         window.addEventListener('resize', ()=>{
             setScreenWidth(window.screen.width)
         })
-        if(screenWidth > 800){
-            console.log('maior')
+        if(screenWidth > 768){
             return (<NavbarList/>)
         }else{
-            console.log('menor')
             return (<NavbarMenuButton/>)
         }
     }

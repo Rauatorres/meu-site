@@ -60,10 +60,11 @@
     margin-left: -1.5vw;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .Navbar{
         /* background-color: red; */
         height: 40vw;
+        margin-top: 7vw;
     }
 
 }

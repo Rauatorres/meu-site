@@ -35,3 +35,18 @@
 .ApresentacaoTextoVermelho{
     color: #F03737;
 }
+
+@media (max-width: 768px) {
+    .MinhaImagemApresentacao{
+        background-size: 30vw;
+        width: 30vw;
+        height: 30vw;
+        grid-column: 5/span 4;
+        margin-top: 100px;
+        margin-bottom: 25px;
+        border-radius: 20vw;
+    }
+    .TextoApresentacao{
+        font-size: 7vw;
+    }
+}
