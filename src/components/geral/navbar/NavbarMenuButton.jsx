@@ -30,7 +30,13 @@ export default props=>{
                 </div>
             )
         }else{
-            return(<NavbarListAberta altura={alturaDaNav} botaoFecharMenu={<div onClick={mudarEstadoMenu}><IoMdArrowDropup className='BotaoFecharMenu'/></div>}/>)
+            return(
+                <NavbarListAberta altura={alturaDaNav} botaoFecharMenu={
+                    <div className='BotaoFecharMenuBox' onClick={mudarEstadoMenu}>
+                        <IoMdArrowDropup className='BotaoFecharMenu'/>
+                    </div>
+                }/>
+            )
         }
     }
 

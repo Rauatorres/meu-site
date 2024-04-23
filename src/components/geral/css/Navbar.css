@@ -38,6 +38,7 @@
 
 .NavbarBotaoMenuBox{
     /* margin-top: 10vw; */
+    width: fit-content;
 }
 .NavbarBotaoMenu{
     font-size: 7vw;
@@ -58,6 +59,12 @@
 .BotaoFecharMenu{
     font-size: 8vw !important;
     margin-left: -1.5vw;
+    /* background-color: red; */
+}
+.BotaoFecharMenuBox{
+    width: fit-content;
+    /* background-color: blue; */
+    margin-left: 0;
 }
 
 @media (max-width: 768px) {
@@ -65,6 +72,20 @@
         /* background-color: red; */
         height: 40vw;
         margin-top: 7vw;
+        margin-bottom: 0;
     }
-
+    /* .NavDireita{
+        display: flex;
+        justify-content: end;
+    } */
+    .NavDireita .NavbarBotaoMenuBox,
+    .NavDireita li{
+        margin: 2.5vw auto;
+        margin-right: 0;
+    }
+    .NavDireita .BotaoFecharMenuBox{
+        /* background-color: red; */
+        margin: auto;
+        margin-right: 0;
+    }
 }
