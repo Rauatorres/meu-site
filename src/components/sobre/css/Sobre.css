@@ -27,7 +27,7 @@
 }
 .SobreTextoBox{
     margin-top: 10vw;
-    /* background-color: blue; */
+    background-color: blue;
 }
 .SobreTexto{
     font-size: 3vw;
@@ -72,13 +72,19 @@
     .MinhaImagemSobre{
         background-size: 160% 100%;
         background-position-x:  center;
-        height: 150vw;
+        height: 140vw;
+    }
+    .SobreConteudoBox{
+        grid-row: 3;
     }
     .SobreBotaoIconeBox{
         margin-top: 0;
     }
     .SobreIcone{
         font-size: 15vw !important;
+    }
+    .SobreTextoBox{
+        margin-top: 5vw;
     }
     .SobreTexto{
         font-size: 4vw;
@@ -95,7 +101,7 @@
 }
 @media (max-width: 425px) {
     .SobreBotaoCurriculo{
-        padding: 3vw 0;
+        padding: 2vw 0;
         /* border-radius: ; */
     }
 }
