@@ -5,7 +5,7 @@
 }
 
 .NavEsquerda{
-    background-color: red;
+    /* background-color: red; */
     grid-column: 2/span 5;
 }
 .NavDireita{
