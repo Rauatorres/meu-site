@@ -27,7 +27,8 @@
 }
 
 .TecnologiasCategoria{
-    /* background-color: red; */
+    /* background-color: blue; */
+    width: 32vw;
     margin: 50px 0;
 }
 .TecnologiasCategoriaTitulo{
@@ -53,7 +54,7 @@
     display: flex;
     align-items: center;
     padding: 1.5vw;
-    width: 30vw;
+    /* width: 30vw; */
     font-size: 1.5vw;
 }
 .TecnologiaIcone{
@@ -76,4 +77,61 @@
     /* margin: 10px; */
     margin: auto;
     font-size: 4vw !important;
+}
+
+@media (max-width: 768px) {
+    .TecnologiasTituloBox{
+        margin-top: 0;
+        margin-bottom: 5vw; 
+        grid-column: 2/span 7;
+    }
+    .TecnologiasTitulo{
+        font-size: 8vw;
+        margin-bottom: 2vw;
+    }
+    .TecnologiasSubtitulo{
+        font-size: 5vw;
+    }
+
+    .AreaTecnologiasCategorias{
+        grid-column: 3/span 8;
+        /* background-color: red; */
+    }
+    .TecnologiasArea{
+        /* background-color: red; */
+    }
+    .TecnologiasCategoria{
+        /* background-color: blue; */
+        width: 100%;
+    }
+    .TecnologiasCategoriaTitulo{
+        font-size: 7vw;
+    }
+    .TecnologiasCategoriaIcone{
+        font-size: 13vw !important;
+    }
+    
+    .Tecnologia{
+        padding: 3vw 1.5vw;
+    }
+    .TecnologiaNome{
+        font-size: 5vw;
+        margin-left: 3vw;
+    }
+    .TecnologiaIcone{
+        font-size: 6vw !important;
+    }
+
+    .TecnologiasBotaoMostrarMais{
+        margin-top: 10vw;
+        /* height: fit-content; */
+        padding: 0.5vw;
+    }
+    .TecnologiasBotaoMostrarMaisIcone{
+        font-size: 7vw !important;
+        /* display: block; */
+        height: fit-content;
+        /* margin: 10vw auto; */
+        /* background-color: red; */
+    }
 }

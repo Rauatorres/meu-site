@@ -4,4 +4,5 @@ export default (areaTecnologiaTamanhoMaximo, areaTecnologiaTamanhoReduzido, area
     }else{
         setAreaTecnologiasStyle(areaTecnologiaTamanhoReduzido)
     }
+    // console.log(areaTecnologiasStyle)
 }
