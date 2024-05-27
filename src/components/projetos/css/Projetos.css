@@ -78,6 +78,7 @@
 .ProjetoTecnologias{
     /* background-color: green; */
     display: flex;
+    justify-content: space-around;
 }
 .FadeOut *{
     background-color: white;
@@ -139,5 +140,24 @@
     }
     .BotaoSelecaoProjeto{
         margin: 2vw 1.7vw;
+    }
+
+    .Projeto{
+        grid-column: 2/span 8;
+        height: 90vw;
+        margin-top: 15vw;
+    }
+    .ProjetoTitulo{
+        font-size: 6vw;
+        margin: 15vw auto;
+    }
+    .ProjetoDescricao{
+        font-size: 4vw;
+    }
+
+    .ProjetoTecnologia{
+        font-size: 3vw;
+        padding: 1.3vw 3.2vw;
+        border-radius: 2.5vw;
     }
 }
