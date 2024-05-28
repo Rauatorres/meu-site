@@ -143,6 +143,7 @@
         /* background-color: red; */
         grid-column: 1/span 10;
         display: flex;
+        overflow: hidden;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -178,5 +179,20 @@
         padding: 1.3vw 3.2vw;
         margin: 2vw;
         border-radius: 2.5vw;
+    }
+
+    .AreaBotoes{
+        grid-column: 2/span 8;
+        margin: 20vw 0;
+    }
+    .ProjetoBotao{
+        margin-bottom: 15vw;
+        font-size: 5vw;
+        padding: 2.5vw;
+        border-radius: 2vw;
+    }
+    .BotaoVerProjeto{
+        border-width: 1px;
+        
     }
 }
