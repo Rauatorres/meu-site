@@ -31,6 +31,13 @@
     border-radius: 0.7vw;
 }
 
+.ContatoFormulario *{
+    font-size: 1.5vw;
+}
+.BotaoEnviarContato{
+    /* padding: 10vw; */
+}
+
 .ContatoFormularioLabel{
     /* background-color: red; */
     width: fit-content;
@@ -43,7 +50,6 @@
 .ContatoFormularioInputEmail,
 .ContatoFormularioInputMsg,
 .BotaoEnviarContato{
-    font-size: 1.5vw;
     padding: 3% 0; 
     border-radius: 0.4vw;
     border: none;
@@ -90,6 +96,9 @@
     padding-top: 4%;
 }
 .BotaoEnviarContato{
+    /* color: blue; */
+    font-size: 1.5vw;
+
     display: block;
     background-color: #FF756C;
     color: white;
@@ -164,4 +173,32 @@
     border-radius: 0.5vw;
     position: absolute;
     margin-left: -1.45vw;
+}   
+
+@media (max-width: 768px){
+    .ContatoTituloBox{
+        margin-top: 0;
+        margin-bottom: 20vw; 
+        grid-column: 2/span 7;
+    }
+    .ContatoTitulo{
+        font-size: 8vw;
+        margin-bottom: 2vw;
+    }
+    .ContatoSubtitulo{
+        font-size: 5vw;
+    }
+
+    .ContatoFormulario{
+        grid-column: 1/span 10;
+    }
+    .ContatoFormulario *{
+        font-size: 3vw;
+    }
+    .ContatoFormularioEmailTelBox, .ContatoFormularioInputMsg{
+        margin-top: 8vw;
+    }
+    .BotaoEnviarContato{
+        font-size: 5vw;
+    }
 }
