@@ -201,4 +201,36 @@
     .BotaoEnviarContato{
         font-size: 5vw;
     }
+
+    .ContatoAreaInformacoes{
+        grid-column: 1/span 10;
+        /* background-color: red; */
+        margin-top: 20vw;
+    }
+    .ContatoInformacoesTexto{
+        font-size: 5vw;
+    }
+    .ContatoInformacoesIconeBox{
+        padding: 5vw;
+        border-radius: 50vw;
+        margin: 20vw auto;
+    }
+    .ContatoInformacoesIcone{
+        font-size: 12vw !important;
+    }
+    .ContatoInformacao{
+        padding: 2.5vw 4vw;
+        border-radius: 2vw;
+        margin: 10vw auto;
+    }
+    .ContatoInformacaoIcone{
+        font-size: 4vw !important;
+    }
+    .ContatoInformacaoTexto{
+        font-size: 3vw !important;
+        margin-left: 2.5vw;
+    }
+    .ContatoInformacaoBotaoCopiar{
+        font-size: 4vw !important;
+    }
 }
