@@ -139,6 +139,19 @@
 }
 
 @media (max-width: 768px) {
+    .ProjetosTituloBox{
+        margin-top: 0;
+        margin-bottom: 20vw;
+        grid-column: 5/span 7;
+    }
+    .ProjetosTitulo{
+        font-size: 8vw;
+        margin-bottom: 2vw;
+    }
+    .ProjetosSubtitulo{
+        font-size: 5vw;
+    }
+
     .AreaSelecaoProjetos{
         /* background-color: red; */
         grid-column: 1/span 10;
