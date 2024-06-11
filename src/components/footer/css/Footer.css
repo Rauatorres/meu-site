@@ -45,3 +45,22 @@ footer{
     font-size: 1vw !important;
     margin-left: 0.5vw;
 }
+
+@media (max-width: 768px) {
+    footer{
+        padding-top: 4vw;
+    }
+
+    .FooterTitulo{
+        font-size: 4vw;
+    }
+    .FooterConteudo{
+        font-size: 3vw;
+    }
+    .FooterTecnologiaUsada{
+        margin-left: 3vw;
+    }
+    .FooterLinkRepositorio{
+        font-size: 2vw;
+    }
+}
