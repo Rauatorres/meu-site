@@ -16,7 +16,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default props=>
 <div className='ContatoAreaInformacoes'>
-    <h3 className='ContatoInformacoesTexto'>Ou se preferir, entre em contato...</h3>
+    <h3 className='ContatoInformacoesTexto raleway-Fonte2'>Ou se preferir, entre em contato...</h3>
     <div className='ContatoInformacoesIconeBox'><BiSolidMessage className='ContatoInformacoesIcone'/></div>
     <div>
         <Informacao

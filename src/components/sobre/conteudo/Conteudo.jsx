@@ -7,13 +7,13 @@ export default props=>
 <div className='SobreConteudoBox'>
     <div className='SobreIconeBox'><FaLaptopCode className='SobreIcone'/></div>
     <div className='SobreTextoBox'>
-        <h2 className='SobreTexto'>
+        <h2 className='SobreTexto raleway-Fonte2 '>
             Desenvolvo sites e sistemas web completos,
             desde a interface ao código no servidor.
             Programo em Javascript desde 2019. 
         </h2>
     </div>
-    <a className='SobreBotaoCurriculo' href="files/curriculo.txt" download="currículo.txt">
+    <a className='SobreBotaoCurriculo raleway-Fonte3' href="files/curriculo.txt" download="currículo.txt">
         baixar meu currículo (<span className='SobreBotaoCurriculoTextoPDF'>PDF</span>) <FaFileDownload className='SobreBotaoIcone'/>
     </a>
 </div>

@@ -30,7 +30,7 @@ export default props=>{
                     <input className='ContatoFormularioInputEmail' type="email" name="email" id="email" onChange={handleStateChange} placeholder='Email'/>
             </div>
                 <textarea className='ContatoFormularioInputMsg' name="msg" id="msg" cols="30" rows="10"onChange={handleStateChange} placeholder='Digite...'></textarea>
-            <input className='BotaoEnviarContato' type="submit" value="Enviar" />
+            <input className='BotaoEnviarContato raleway-Fonte3' type="submit" value="Enviar" />
         </form>
     )
 }

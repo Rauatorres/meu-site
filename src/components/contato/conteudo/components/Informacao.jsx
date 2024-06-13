@@ -10,7 +10,7 @@ export default props=>{
         <div className='ContatoInformacao'>
             <div className='ContatoInformacaoIconTextoBox'>
                 <span className='ContatoInformacaoIcone'>{props.icone}</span>
-                <span className='ContatoInformacaoTexto'>{props.texto}</span>
+                <span className='ContatoInformacaoTexto raleway-Fonte3'>{props.texto}</span>
             </div>
             <div className='ContatoInformacaoBotaoCopiarBox' 
                 onClick={()=>{navigator.clipboard.writeText(props.texto); setMsgCopiadoDisplay('block')}}

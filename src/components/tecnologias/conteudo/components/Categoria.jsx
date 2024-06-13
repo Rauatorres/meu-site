@@ -28,7 +28,7 @@ export default props=>{
 
     return(
         <div className='TecnologiasCategoria'>
-            <div className='TecnologiasCategoriaTitulo'>{props.titulo}</div>
+            <div className='TecnologiasCategoriaTitulo raleway-Fonte3'>{props.titulo}</div>
             <div className='TecnologiasCategoriaIconeBox'>{props.icone}</div>
 
             <div 

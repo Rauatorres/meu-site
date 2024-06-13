@@ -29,13 +29,13 @@ export default props=>{
             >
             </div>
             <div 
-                className='ProjetoTitulo'
+                className='ProjetoTitulo raleway-Fonte3'
                 style={{color: tituloCor}}
             >
                 {props.titulo}
             </div>
             <div 
-                className='ProjetoDescricao'
+                className='ProjetoDescricao raleway-Fonte4'
                 style={{color: descricaoCor}}
             >
                 {props.descricao}
