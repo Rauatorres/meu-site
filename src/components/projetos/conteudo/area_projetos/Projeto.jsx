@@ -21,13 +21,29 @@ export default props=>{
         }
     }, [props.estadoTransicao])
 
+    function verifProjetoFinalizado(returnFinalizado, returnNaoFinalizado){
+        if(props.finalizado){
+            return returnFinalizado
+        }else{
+            return returnNaoFinalizado
+        }
+    }
+
     return (
         <div className='Projeto'>
-            <div 
-                className='ProjetoImagem'
-                style={{backgroundColor: imagemCor}}
-            >
-            </div>
+            {verifProjetoFinalizado(
+                (
+                    <img className='ProjetoImagemFinalizado' src={props.imagem} alt="" />
+                ),
+                (
+                    <div 
+                        className='ProjetoImagemNaoFinalizado'
+                        style={{backgroundColor: imagemCor}}
+                    >
+                        Projeto em desenvolvimento...
+                    </div>
+                )
+            )}
             <div 
                 className='ProjetoTitulo raleway-Fonte3'
                 style={{color: tituloCor}}

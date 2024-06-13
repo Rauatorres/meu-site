@@ -32,6 +32,7 @@ export default (listaProjetos, projetoEmSelecao, selecionarProjeto)=>{
                 projetoIndex={index}
                 width={dimensaoBotao('width', index)}
                 height={dimensaoBotao('height', index)}
+                projetoFinalizado={projeto.finalizado}
             />
         )
     })

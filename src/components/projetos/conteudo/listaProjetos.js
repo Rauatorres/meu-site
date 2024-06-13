@@ -1,73 +1,26 @@
 const listaProjetos = [
     {
-        titulo: "projeto1",
+        titulo: "Gerenciador de Rotina",
         imagem: "projeto1_img",
-        descricao: "sadljsalkddçsajdlkaskldasjçldkjçasl",
+        descricao: "Em breve...",
         tecnologias: [
-            'tecnologia'    
+            'ReactJS',
+            'Node.js'    
         ],
         linkVisualizacao: "#",
         linkProjeto: "#",
+        finalizado: false
     },
     {
-        titulo: "projeto2",
+        titulo: "Gerador de Gráficos",
         imagem: "projeto2_img",
-        descricao: "sadljsalkddçsajdlkaskldasjçldkjçasl",
+        descricao: "Em breve...",
         tecnologias: [
-            'tecnologia',
-            'tecnologia'
+            'ReactJS'   
         ],
         linkVisualizacao: "#",
         linkProjeto: "#",
-    },
-    {
-        titulo: "projeto3",
-        imagem: "projeto3_img",
-        descricao: "sadljsalkddçsajdlkaskldasjçldkjçasl",
-        tecnologias: [
-            'tecnologia',
-            'tecnologia',
-            'tecnologia'
-        ],
-        linkVisualizacao: "#",
-        linkProjeto: "#",
-    },
-    {
-        titulo: "projeto4",
-        imagem: "projeto4_img",
-        descricao: "sadljsalkddçsajdlkaskldasjçldkjçasl",
-        tecnologias: [
-            'tecnologia',
-            'tecnologia',
-            'tecnologia'
-        ],
-        linkVisualizacao: "#",
-        linkProjeto: "#",
-    },
-    {
-        titulo: "projeto5",
-        imagem: "projeto5_img",
-        descricao: "sadljsalkddçsajdlkaskldasjçldkjçasl",
-        tecnologias: [
-            'tecnologia',
-            'tecnologia',
-            'tecnologia'
-        ],
-        linkVisualizacao: "#",
-        linkProjeto: "#",
-    },
-    {
-        titulo: "projeto6",
-        imagem: "projeto6_img",
-        descricao: "sadljsalkddçsajdlkaskldasjçldkjçasl",
-        tecnologias: [
-            'tecnologia',
-            'tecnologia',
-            'tecnologia',
-            'tecnologia'
-        ],
-        linkVisualizacao: "#",
-        linkProjeto: "#",
+        finalizado: false
     }
 ]
 
