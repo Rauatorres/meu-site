@@ -98,7 +98,7 @@
     color: rgba(0, 0, 0, 0);
 }
 .ProjetoTecnologia{
-    font-size: 1.3vw;
+    font-size: 1vw;
     padding: 0.8vw 2vw;
     border-radius: 2vw;
     margin: 1.5vw;
@@ -118,7 +118,7 @@
     text-align: center;
     text-decoration: none;
     padding: 2vw;
-    font-size: 3vw;
+    font-size: 2.7vw;
     border-radius: 2vw;
     color: white;
 }
@@ -188,7 +188,7 @@
     }
 
     .ProjetoTecnologia{
-        font-size: 2.5vw;
+        font-size: 1.9vw;
         padding: 1.3vw 3.2vw;
         margin: 2vw;
         border-radius: 2.5vw;
@@ -200,12 +200,12 @@
     }
     .ProjetoBotao{
         margin-bottom: 15vw;
-        font-size: 5vw;
+        font-size: 4.5vw;
         padding: 2.5vw;
-        border-radius: 2vw;
+        border-radius: 3vw;
     }
     .BotaoVerProjeto{
-        border-width: 1px;
+        border-width: 3px;
         
     }
 }
