@@ -5,7 +5,7 @@
 }
 
 .MinhaImagemSobre{
-    background-image: url('http://localhost:3000/img/MinhaImagem2.jpg');
+    background-image: url('https://meu-site-eat6.onrender.com/img/MinhaImagem2.jpg');
     background-size: 120% 100%;
     background-position: center;
     grid-column: 1/ span 5;
