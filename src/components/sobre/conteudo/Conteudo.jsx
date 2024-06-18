@@ -13,7 +13,7 @@ export default props=>
             Programo em Javascript desde 2019. 
         </h2>
     </div>
-    <a className='SobreBotaoCurriculo raleway-Fonte3' href="files/curriculo.txt" download="currículo.txt">
+    <a className='SobreBotaoCurriculo raleway-Fonte3' href="files/Currículo_Desenvolvedor_FullStack_Raua_Torres.pdf" download="currículo.txt">
         baixar meu currículo (<span className='SobreBotaoCurriculoTextoPDF'>PDF</span>) <FaFileDownload className='SobreBotaoIcone'/>
     </a>
 </div>
